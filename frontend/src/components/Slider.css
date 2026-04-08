@@ -1,0 +1,110 @@
+/* ========================= */
+/* 🔝 WRAPPER (TOP BAR) */
+/* ========================= */
+.gov-slider-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;              /* FIXED */
+  height: 70px;
+  background: #fff;
+  z-index: 9999;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+/* ========================= */
+/* 🎯 TRACK */
+/* ========================= */
+.gov-slider-track {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: max-content;
+  animation: govScroll 20s linear infinite;
+}
+
+/* ========================= */
+/* 📦 CARD */
+/* ========================= */
+.slider-card {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================= */
+/* 🖼 IMAGE */
+/* ========================= */
+.slider-card img {
+  max-height: 35px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* 🔥 hover zoom effect */
+.slider-card img:hover {
+  transform: scale(1.1);
+}
+
+/* ========================= */
+/* 🔁 ANIMATION */
+/* ========================= */
+@keyframes govScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* IMPORTANT */
+  }
+}
+
+/* ========================= */
+/* 🛑 HOVER PAUSE */
+/* ========================= */
+.gov-slider-wrapper:hover .gov-slider-track {
+  animation-play-state: paused;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE */
+/* ========================= */
+@media (max-width: 768px) {
+  .gov-slider-wrapper {
+    height: 50px;
+  }
+
+  .slider-card {
+    width: 100px;
+  }
+
+  .slider-card img {
+    max-height: 25px;
+  }
+
+  .gov-slider-track {
+    animation-duration: 18s;
+  }
+}
+
+@media (max-width: 480px) {
+  .gov-slider-wrapper {
+    height: 45px;
+  }
+
+  .slider-card {
+    width: 80px;
+  }
+
+  .slider-card img {
+    max-height: 22px;
+  }
+
+  .gov-slider-track {
+    animation-duration: 15s;
+  }
+}

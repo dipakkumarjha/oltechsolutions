@@ -1,0 +1,349 @@
+.hardware-page {
+  font-family: "Inter", sans-serif;
+  color: #1f2937;
+}
+
+/* ================= HERO ================= */
+.wifi-hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #ffffff !important;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #ffffff !important;
+}
+
+/* ================= OVERVIEW ================= */
+.wifi-overview {
+  padding: 100px 10%;
+}
+
+.overview-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.overview-text {
+  flex: 1;
+}
+
+.overview-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.overview-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.overview-image {
+  flex: 1;
+}
+
+.overview-image img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* ================= FEATURES ================= */
+.wifi-features {
+  padding: 100px 10%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.wifi-features h2 {
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: rgb(129, 95, 141);
+  color: white; 
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card h3 {
+  margin-bottom: 15px;
+}
+.feature-card p{
+  color: #000000;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  color: cadetblue;
+}
+
+/* ================= SLIDER ================= */
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 90px 0 70px 0;
+  background: #ffffff;
+}
+
+.slider-wrapper h2 {
+  text-align: center;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 80px;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.slider-card {
+  min-width: 160px;
+  height: 120px;
+  background: #fff;
+  border-radius: 14px;
+  margin: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.slider-card img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+.slider-card:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= BENEFITS ================= */
+.hardware-benefits {
+  padding: 100px 10%;
+}
+
+.benefits-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.benefits-text {
+  flex: 1;
+}
+
+.benefits-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  
+}
+
+.benefits-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-text li {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.benefits-image {
+  flex: 1;
+}
+
+.benefits-image img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* ================= USE CASE ================= */
+.wifi-usecase {
+  padding: 100px 10%;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.usecase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.usecase-grid div {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.usecase-grid div:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.contact-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.contact-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-content p {
+  margin-bottom: 20px;
+}
+
+.contact-btn {
+  padding: 12px 30px;
+  background: #fb8500;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #e76f00;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .overview-text h2,
+  .wifi-features h2,
+  .benefits-text h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .overview-container,
+  .benefits-container {
+    flex-direction: column;
+  }
+
+  .slider-card {
+    min-width: 130px;
+    height: 100px;
+  }
+
+  .contact-content h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wifi-overview,
+  .wifi-features,
+  .wifi-benefits,
+  .wifi-usecase {
+    padding: 60px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
+  .feature-card {
+    padding: 25px;
+  }
+}
+
+
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home Page -->
+  <url>
+    <loc>http://localhost:5000/sitemap.xml</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>http://localhost:5000/about</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Product & Services -->
+  <url>
+    <loc>http://localhost:5000/product-services</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>http://localhost:5000/contact</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Career Page -->
+   <url>
+    <loc>http://localhost:5000/career</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- partnerships -->
+  <url>
+    <loc>http://localhost:5000/partnerships</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- chat -->
+  <url>
+    <loc>http://localhost:5000/chat</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- managed-wifi -->
+  <url>
+    <loc>http://localhost:5000/managed-wifi</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- it-infra -->
+  <url>
+    <loc>http://localhost:5000/it-infra</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- cloud-data-center -->
+   <url>
+    <loc>http://localhost:5000/cloud-data-center</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- software-licence -->
+  <url>
+    <loc>http://localhost:5000/software-licence</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- manage-security -->
+  <url>
+    <loc>http://localhost:5000/manage-security</loc>
+    <priority>0.8</priority>
+  </url>
+
+    <!-- it-architecture -->
+    <url>
+    <loc>http://localhost:5000/it-architecture</loc>
+    <priority>0.8</priority>
+  </url>
+
+
+</urlset>

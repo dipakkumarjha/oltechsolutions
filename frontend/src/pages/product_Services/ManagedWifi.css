@@ -1,0 +1,271 @@
+/* ================= GLOBAL ================= */
+/* .managed-wifi-page {
+  font-family: "Inter", sans-serif;
+  color: #1f2937;
+  overflow-x: hidden;
+} */
+
+/* ================= HERO (NO SHADE) ================= */
+.wifi-hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* REMOVE SHADE */
+.hero-overlay {
+  display: none;
+}
+
+/* CONTENT OVER VIDEO */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  max-width: 600px;
+  z-index: 2;
+  color: #fafafa;
+}
+
+/* TEXT VISIBILITY WITHOUT SHADE */
+.hero-content h1 {
+  font-size: 520px;
+  margin-bottom: 15px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #000 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ================= OVERVIEW ================= */
+.wifi-overview {
+  padding: 80px 8%;
+  margin-top: -80px;
+}
+
+.overview-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.overview-text,
+.overview-image {
+  flex: 1 1 500px;
+}
+
+.overview-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ================= FEATURES ================= */
+.wifi-features {
+  padding: 80px 8%;
+  text-align: center;
+  background: #f9fafb;
+  margin-top: -100px;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.feature-card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= SLIDER ================= */
+.slider-wrapper {
+  padding: 80px 0;
+  text-align: center;
+  background: #fff;
+  overflow: hidden;
+  margin-top: -100px;
+}
+
+.slider-wrapper h2 {
+  margin-bottom: 60px;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.slider-card {
+  min-width: 150px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-card img {
+  width: 80%;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= BENEFITS ================= */
+.wifi-benefits {
+  padding: 80px 8%;
+}
+
+.benefits-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.benefits-image,
+.benefits-text {
+  flex: 1 1 500px;
+}
+
+.benefits-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.benefits-text ul {
+  margin-top: 15px;
+  line-height: 2;
+}
+
+/* ================= USE CASE ================= */
+.wifi-usecase {
+  padding: 80px 8%;
+  text-align: center;
+  margin-top: -50px;
+}
+
+.usecase-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.usecase-grid div {
+  flex: 1 1 180px;
+  max-width: 200px;
+  padding: 15px;
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.contact video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact .overlay {
+  display: none;
+  /* NO SHADE */
+}
+
+.contact-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+.contact-content h1,
+.contact-content p {
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-content {
+    left: 5%;
+    right: 5%;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .overview-container,
+  .benefits-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,188 @@
+/* ================= PAGE ================= */
+
+.products-page {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #ffffff;
+}
+
+
+/* ================= HERO HEADER ================= */
+
+.products-header {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+/* Background Video (same as your other hero sections) */
+
+.products-header .video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+
+/* Overlay */
+
+.header-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 900px;
+  padding: 20px;
+}
+
+
+/* Dark overlay layer */
+
+.products-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+
+/* Text */
+
+.header-overlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.header-overlay p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* ================= SERVICE SECTION ================= */
+
+.service-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 80px 10%;
+  background: #ffffff;
+}
+
+
+/* Reverse layout */
+
+.service-section.reverse {
+  flex-direction: row-reverse;
+  background: #f8fafc;
+}
+
+
+/* Image */
+
+.service-image img {
+  width: 500px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+
+/* Text */
+
+.service-text {
+  max-width: 550px;
+}
+
+.service-text h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #0a2540;
+}
+
+.service-text p {
+  font-size: 17px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+
+/* List */
+
+.service-text ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.service-text ul li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+
+/* Button */
+
+.learn-btn {
+  padding: 12px 26px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.learn-btn:hover {
+  background: #0056b3;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .service-section,
+  .service-section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-overlay h1 {
+    font-size: 34px;
+  }
+
+  .header-overlay p {
+    font-size: 16px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .products-header {
+    height: 60vh;
+  }
+
+  .header-overlay h1 {
+    font-size: 26px;
+  }
+
+}
