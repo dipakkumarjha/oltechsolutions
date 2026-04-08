@@ -63,7 +63,7 @@ const ContactForm = () => {
     if (!validate()) return;
 
     try {
-      await axios.post("http://localhost:5000/api/contact", form);
+      await axios.post("https://oltechsolutions.onrender.com/api/contact", form);
 
       alert("Form submitted successfully!");
 
