@@ -48,10 +48,14 @@ const Footer = () => {
           <div className="footer-column">
             <h5>SERVICES</h5>
             <ul>
-              <li><a href="/product-services">Wi-Fi</a></li>
-              <li><a href="/product-services">Cyber Security</a></li>
-              <li><a href="/product-services">IT Infrastructure</a></li>
-              <li><a href="/product-services">Data Centre</a></li>
+              <li><a href="/managed-wifi">Wi-Fi</a></li>
+              <li><a href="/manage-security">Manage Security</a></li>
+              <li><a href="/Communication-Collaboration">Manage Communication</a></li>
+              <li><a href="/software-licence">Software License</a></li>
+              <li><a href="/hardware">Hardware & Peripheral</a></li>
+              <li><a href="/cloud-data-center">Cloud & Data Center</a></li>
+              <li><a href="/surveillance">Manage Communication</a></li>
+              <li><a href="/telecom">Telecom Services</a></li>
             </ul>
           </div>
 

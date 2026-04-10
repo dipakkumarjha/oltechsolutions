@@ -4,14 +4,17 @@ body {
   padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
-}
+  box-sizing: border-box;
+} 
+
+
 /* ================= GLOBAL FIX ================= */
 
 /* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} */
+} */ 
 
 img, video {
   max-width: 100%;
@@ -413,7 +416,7 @@ img, video {
 
 
  /* Scrolling Part=============== */
- .choose-column {
+ /* .choose-column {
   height: 420px;
   overflow: hidden;
   position: relative;
@@ -437,12 +440,12 @@ img, video {
     transform: translateY(100%);
   }
 }
-  
+   */
 
 
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .why-choose-content {
     flex-direction: column;
   }
@@ -456,7 +459,7 @@ img, video {
   .choose-column.right {
     align-items: center;
   }
-}
+} */
  
 
 
@@ -467,7 +470,7 @@ img, video {
 
 
 
-.slider-wrapper {
+.home-slider-wrapper {
   width: 100%;
   overflow: hidden;
   padding: 90px 0 70px 0;
@@ -475,10 +478,11 @@ img, video {
   background: #ffffff;
 }
 
-.slider-wrapper h2 {
+.home-slider-wrapper h2 {
   display: flex;
   align-items: center;
   font-weight: 700;
+  justify-content: center ;
   color: #000000;
   text-align: center;
   /* margin-top: -50px; */
@@ -488,15 +492,15 @@ img, video {
 
 
 
-.slider-track {
+.home-slider-track {
   display: flex;
   width: max-content;
-  animation: scroll 25s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
-.slider-card {
-  min-width: 160px;
-  height: 120px;
+.home-slider-card {
+  min-width: 120px;
+  height: 100px;
   background: #fff;
   border-radius: 14px;
   margin: 0 12px;
@@ -505,15 +509,16 @@ img, video {
   justify-content: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
+  border-radius: 30px;
 }
 
-.slider-card img {
-  width: 70%;
+.home-slider-card img {
+  width: 100px;
   height: auto;
   object-fit: contain;
 }
 
-.slider-card:hover {
+.home-slider-card:hover {
   transform: translateY(-8px) scale(1.05);
 }
 
@@ -530,9 +535,9 @@ img, video {
 
 /* responsive */
 @media (max-width: 768px) {
-  .slider-card {
-    min-width: 130px;
-    height: 100px;
+  .home-slider-card {
+    min-width: 100px;
+    height: 80px;
   }
 }
 

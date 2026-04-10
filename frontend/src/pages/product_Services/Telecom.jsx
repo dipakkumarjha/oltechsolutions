@@ -9,6 +9,9 @@ import Alcatel from "../OemImg/Telecom/Alcatel.png"
 import Ericsson from '../OemImg/Telecom/Ericsson.png'
 import Microtek from "../OemImg/Telecom/Ericsson.png"
 import Ubiquiti from "../OemImg/Telecom/Ubiquiti.png"
+import TelecomVideo from "./productImg/TelecomVideo.mp4"
+import TeleImg from "./productImg/TeleImg.png"
+import WhyChoose from "./productImg/WhyChoose.png"
 import Slider from "../../components/Slider";
 
 const TelecomServices = () => {
@@ -30,7 +33,7 @@ const TelecomServices = () => {
       {/* HERO */}
       <section className="wifi-hero">
         <video ref={videoRef} autoPlay loop muted className="hero-img">
-          <source src="/video.mp4" type="video/mp4" />
+          <source src={TelecomVideo} type="video/mp4" />
         </video>
  
         <div className="hero-overlay"></div>
@@ -62,7 +65,7 @@ const TelecomServices = () => {
           </div>
 
           <div className="overview-image">
-            <img src="/image1.jpg" alt="Telecom Overview" />
+            <img src={TeleImg} alt="Telecom Overview" />
           </div>
 
         </div>
@@ -115,7 +118,7 @@ const TelecomServices = () => {
         <div className="benefits-container">
 
           <div className="benefits-image">
-            <img src="/image2.jpg" alt="Benefits" />
+            <img src={WhyChoose} alt="Benefits" />
           </div>
 
           <div className="benefits-text">

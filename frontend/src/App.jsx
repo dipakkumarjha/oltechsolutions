@@ -33,20 +33,17 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/managed-wifi' element={<ManagedWifi />} />
-          <Route path='/it-infra' element={<ITInfrastructure/>}/>
           <Route path="/cloud-data-center" element={<DataCenterCloud/>}/>
           <Route path='/software-licence' element={<SoftwareLicence/>}/>
           <Route path="/manage-security" element={<ManageSecurity/>}/>
-          <Route path="/it-architecture" element={<ITArchitecture/>}/>
           <Route path='/product-services' element={<Services/>} />
           <Route path="/chat" element={<WhatsappChat/>}/>
-          {/* <Route path='/popup' element= {<Popup />}/> */}
           <Route path='/career' element={<Career />} />
           <Route path='/partnerships' element={<Partnerships />} />
           <Route path='/hardware' element={<Hardware/>} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/communication-collaboration' element={<Communication/>} />
-          <Route path='/survillance' element={<SurveillanceSolution/>} />
+          <Route path='/surveillance' element={<SurveillanceSolution/>} />
         </Routes>
       
     </>
@@ -54,3 +51,4 @@ function App() {
 }
 
 export default App
+ 

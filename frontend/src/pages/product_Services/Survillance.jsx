@@ -3,6 +3,9 @@ import "./Survillance.css";
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 import aboutVideo from "../../Images/aboutVideo.mp4"
+import SurveillanceVideo from "./productImg/SurveillanceVideo.mp4"
+import SurveillanceImg from "./productImg/SurveillanceImg.png"
+import WhyChoose from "./productImg/WhyChoose.png"
 
 import Panasonic from "../OemImg/Communication/Panasonic.jpg";
 import CpPlus from "../OemImg/Survillance/CpPlus.png"
@@ -31,7 +34,7 @@ const SurveillanceSolution = () => {
       {/* HERO */}
       <section className="wifi-hero">
         <video ref={videoRef} autoPlay loop muted className="hero-img">
-          <source src={aboutVideo} type="video/mp4" />
+          <source src={SurveillanceVideo} type="video/mp4" />
         </video>
 
         <div className="hero-overlay"></div>
@@ -63,7 +66,7 @@ const SurveillanceSolution = () => {
           </div>
 
           <div className="overview-image">
-            <img src="/image1.jpg" alt="Surveillance" />
+            <img src={SurveillanceImg} alt="Surveillance" />
           </div>
 
         </div>
@@ -131,7 +134,7 @@ const SurveillanceSolution = () => {
         <div className="benefits-container">
 
           <div className="benefits-image">
-            <img src="/image2.jpg" alt="Benefits" />
+            <img src={WhyChoose} alt="Benefits" />
           </div>
 
           <div className="benefits-text">

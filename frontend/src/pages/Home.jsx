@@ -56,14 +56,14 @@ const Home = () => {
       id: "cloud-data-center",
       title: "OL Tech Solutions provides reliable Cloud & Data Center solutions to ensure secure, scalable, and efficient data management.",
       img: DataCenter,
-    },
+    }, 
     {
-      id: "survillance",
+      id: "surveillance",
       title: "OL Tech Solutions provides reliable Surveillance Solutions to ensure smart monitoring, enhanced security, and complete protection for your business.",
       img: Survillance,
     },
     {
-      id: "it-architecture",
+      id: "telecom",
       title: "OL Tech Solutions provides reliable Telecom Services to ensure seamless connectivity and efficient business communication.",
       img: Telecome,
     }
@@ -109,7 +109,7 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <> 
 
       <Popup />
       <Slider/>
@@ -246,11 +246,11 @@ const Home = () => {
 
       {/* ====================Slider For Company Partnership============================ */}
 
-      < section className="slider-wrapper" >
+      < section className="home-slider-wrapper" >
         <h2 >Building Innovative Businesses with Strong Alliance and Business Partners</h2>
-        <div className="slider-track">
+        <div className="home-slider-track">
           {images.concat(images).map((img, index) => (
-            <div className="slider-card" key={index}>
+            <div className="home-slider-card" key={index}>
               <img src={img} alt="sllider" />
             </div>
           ))}

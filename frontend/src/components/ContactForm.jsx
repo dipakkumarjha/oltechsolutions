@@ -69,18 +69,19 @@ const ContactForm = () => {
 
       setForm({
         name: "",
-        email: "", 
+        email: "",
         tel: "",
         message: ""
       });
 
     } catch (error) {
-      alert("Error submitting form");
+      console.log(error); // 🔥 see real error
+      alert(error.response?.data?.message || "Error submitting form");
     }
   };
 
   return (
-    <div> 
+    <div>
       <form className="form" onSubmit={handleSubmit}>
 
         <input
@@ -90,7 +91,7 @@ const ContactForm = () => {
           value={form.name}
           onChange={handleChange}
         />
-        {errors.name && <small style={{color:"red"}}>{errors.name}</small>}
+        {errors.name && <small style={{ color: "red" }}>{errors.name}</small>}
 
         <input
           type="email"
@@ -99,7 +100,7 @@ const ContactForm = () => {
           value={form.email}
           onChange={handleChange}
         />
-        {errors.email && <small style={{color:"red"}}>{errors.email}</small>}
+        {errors.email && <small style={{ color: "red" }}>{errors.email}</small>}
 
         <input
           type="tel"
@@ -108,7 +109,7 @@ const ContactForm = () => {
           value={form.tel}
           onChange={handleChange}
         />
-        {errors.tel && <small style={{color:"red"}}>{errors.tel}</small>}
+        {errors.tel && <small style={{ color: "red" }}>{errors.tel}</small>}
 
         <textarea
           name="message"
@@ -116,7 +117,7 @@ const ContactForm = () => {
           value={form.message}
           onChange={handleChange}
         />
-        {errors.message && <small style={{color:"red"}}>{errors.message}</small>}
+        {errors.message && <small style={{ color: "red" }}>{errors.message}</small>}
 
         <button type='submit' className="submit">Submit</button>
 

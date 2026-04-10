@@ -5,7 +5,7 @@ import Logo from "../Images/Logo.png"
 import aboutVideo from "../Images/aboutVideo.mp4";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-
+import PartnerVideo from "../Images/PartnerVideo.mp4"
 import Cisco from "../pages/OemImg/Cisco.png"
 import Ruckus from "../pages/OemImg/Ruckus.png"
 import Bosch from "../pages/OemImg/Bosch.png"
@@ -98,7 +98,7 @@ const Partnership = () => {
             playsInline
             className="hero-video"
           >
-            <source src={BgVideo} type="video/mp4" />
+            <source src={PartnerVideo} type="video/mp4" />
           </video>
 
           <div className="hero-content">

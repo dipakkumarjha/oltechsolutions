@@ -9,12 +9,12 @@ const Slider = () => {
 
   const govImages = [GEM, iso2015, iso2022, msme, makeinindia]
   return (
-
+ 
     <>
       <section className="gov-slider-wrapper" >
         <div className="gov-slider-track">
           {govImages.concat(govImages).map((img, index) => (
-            <div className="slider-card" key={index}>
+            <div className="gov-slider-card" key={index}>
               <img src={img} alt="sllider" />
             </div>
           ))}
