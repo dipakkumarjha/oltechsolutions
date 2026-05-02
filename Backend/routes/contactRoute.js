@@ -29,7 +29,7 @@ router.post(
       .withMessage("Message is required")
   ],
 
-  async (req, res) => {
+   (req, res) => {
     try {
 
       // 🔎 Check validation errors
@@ -45,7 +45,7 @@ router.post(
 
       // 💾 Save to MongoDB
       const newContact = new Contact({ name, email, tel, message });
-      await newContact.save();
+      newContact.save();
 
       // 📧 Send Email
       const transporter = nodemailer.createTransport({
@@ -56,7 +56,7 @@ router.post(
         },
       });
 
-      await transporter.sendMail({
+       transporter.sendMail({
         from: process.env.EMAIL_USER,   // ⚠️ Important fix
         replyTo: email,                // user email yaha daalo
         to: process.env.EMAIL_USER,
@@ -76,6 +76,7 @@ router.post(
       });
 
     } catch (error) {
+      console.error("CONTACT ROUTE ERROR:", error);
       res.status(500).json({
         success: false,
         message: "Something went wrong"
