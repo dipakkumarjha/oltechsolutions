@@ -1,0 +1,96 @@
+/* Wrapper (top spacing fix) */
+.terms-wrapper {
+  width: 100%;
+  padding-top: 100px; /* navbar + slider */
+  padding-bottom: 50px;
+  background: #f4f7fb;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container */
+.terms-container {
+  width: 100%;
+  max-width: 1000px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+.terms-container h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.updated {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.terms-container h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #283e81;
+}
+
+/* Text */
+.terms-container p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Contact Box */
+.contact-box {
+  margin-top: 15px;
+  padding: 15px;
+  background: #eef2ff;
+  border-radius: 8px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .terms-container {
+    padding: 25px;
+  }
+
+  .terms-container h1 {
+    font-size: 26px;
+  }
+
+  .terms-container h2 {
+    font-size: 18px;
+  }
+
+  .terms-container p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-wrapper {
+    padding: 100px 10px 40px;
+  }
+
+  .terms-container {
+    padding: 20px;
+  }
+
+  .terms-container h1 {
+    font-size: 22px;
+  }
+
+  .terms-container h2 {
+    font-size: 16px;
+  }
+
+  .terms-container p {
+    font-size: 13px;
+  }
+}

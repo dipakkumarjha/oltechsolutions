@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Career.css";
 import Footer from "../components/Footer";
-import CareerImg from "../Images/CareerImg.jpg"
+import CareerImg from "../Images/CareerImgoltechsolutions.jpg"
 import aboutVideo from "../Images/aboutVideo.mp4"
 import Slider from "../components/Slider";
 
@@ -14,16 +14,16 @@ const Career = () => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 1;
     }
-  }, []);
+  }, []); 
 
 
   const jobsRef = useRef(null);
   const scrollToJobs = () => {
     jobsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-  return (
+  return ( 
     <>
-    <Slider/>
+    {/* <Slider/> */}
       {/* HERO SECTION */}
       <section className="career-hero">
         <img src={CareerImg} alt="img" className="hero-img" />
@@ -45,10 +45,7 @@ const Career = () => {
           <div className="career-text">
             <h2>Why Work With OL Tech?</h2>
             <p>
-              At OL Tech Solutions, we foster a culture of innovation,
-              collaboration, and continuous growth. Our teams work on
-              cutting-edge IT infrastructure, cybersecurity, and cloud
-              transformation projects that shape the digital future.
+             Why Work With OL Tech? Because we deliver complete, reliable, and future-ready IT solutions tailored to your business needs. With strong partnerships with leading global technology brands and a team of experienced professionals, we ensure high-performance, secure, and scalable infrastructure. Our focus on innovation, fast deployment, and cost-effective strategies helps businesses achieve maximum efficiency with minimal downtime. We don’t just provide solutions—we build long-term relationships by offering continuous support, proactive maintenance, and a commitment to quality you can trust.
             </p>
           </div>
           <div className="career-image">
@@ -75,7 +72,7 @@ const Career = () => {
           </div>
         </div>
       </section>
-
+ 
      
 
 
@@ -117,17 +114,17 @@ const Career = () => {
 
        {/* Contect Us */}
 
-      <div className='contact'>
+      <div className='career-contact'>
         <video ref={videoRef} autoPlay loop muted className="video">
           <source src={aboutVideo} type="video/mp4" />
         </video>
 
-        <div className="overlay"></div>
+        <div className="career-overlay"></div>
 
-        <div className="contact-content">
+        <div className="career-contact-content">
           <h1>Unlock the Power of OL Tech For Your Business</h1>
           <p>Connect with our experts today to accelerate your business with technology.</p>
-          <Link to="/contact" className="contact-btn">
+          <Link to="/contact" className="career-contact-btn">
             Contact Us
           </Link>
         </div>

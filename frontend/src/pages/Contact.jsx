@@ -1,25 +1,29 @@
 import React from "react";
 import "./Contact.css";
 import Footer from "../components/Footer";
-import ContactPage from "../Images/ContactPage.jpg"
+import ContactPage from "../Images/ContactPageoltechsolutions.jpg"
 import ContactForm from "../components/ContactForm"
-import Slider from "../components/Slider";
+import Location from "../Images/Locationoltechsolutions.png"
+import helpCenteroltechsolutions from "../Images/helpCenteroltechsolutions.jpg"
+import formimg from "../Images/formimgoltechsolutions.jpg"
+import celebrate from "../Images/celebrateoltechsolutions.jpg"
+// import Slider from "../components/Slider";
 
 
 const Contact = () => {
   return (
-    <>
-    <Slider/>
+    <> 
+    {/* <Slider/> */}
       {/* HERO SECTION */}
       <section className="contact-hero">
         <img src={ContactPage} alt="img" className="hero-img" />
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
+        <div className="contact-overlay"></div>
+        {/* <div className="hero-content">
           <h1>Let’s Build The Future Together</h1>
           <p>
             Connect with OL Tech experts to transform your digital journey.
           </p>
-        </div>
+        </div> */}
       </section>
 
       {/* CONTACT SECTION */}
@@ -28,23 +32,12 @@ const Contact = () => {
 
           {/* LEFT IMAGE */}
           <div className="contact-image">
-            <img src={ContactPage} alt="img" />
+            <img src={formimg} alt="img" />
           </div>
 
-          {/* RIGHT FORM */}
-          {/* <div className="contact-form">
-            <h2>Get In Touch</h2>
-            <form>
-              <input type="text" placeholder="Full Name" required />
-              <input type="email" placeholder="Email Address" required />
-              <input type="text" placeholder="Company Name" />
-              <textarea placeholder="Your Message" rows="5"></textarea>
-              <button type="submit">Submit Message</button>
-            </form>
-          </div> */}
             <ContactForm />
         </div>
-      </section>
+      </section> 
 
       {/* OFFICE INFO SECTION */}
       <section className="office-info">
@@ -52,7 +45,7 @@ const Contact = () => {
 
         <div className="office-grid">
           <div className="office-card">
-            <img src={ContactPage} alt="img" />
+            <img src={Location} alt="img" />
             <h3>Noida Headquarters</h3>
             <p>Sector 62, Noida, Uttar Pradesh, India</p>
             <p>📩tasleem.khan@oltechsolutions.co.in</p>
@@ -60,7 +53,7 @@ const Contact = () => {
           </div>
 
           <div className="office-card">
-            <img src={ContactPage}  alt="img" />
+            <img src={helpCenteroltechsolutions}  alt="img" />
             <h3>Support Center</h3>
             <p>24/7 Technical Support</p>
             <p>📩corporatesales@oltechsolutions.co.in</p>
@@ -70,7 +63,7 @@ const Contact = () => {
 
       {/* MAP SECTION */}
       <section className="map-section">
-        <img src={ContactPage}  alt="img" />
+        <img src={celebrate}  alt="img" />
       </section>
 
       {/* FINAL CTA */}

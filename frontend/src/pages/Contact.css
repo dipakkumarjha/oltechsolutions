@@ -7,7 +7,7 @@ body {
 /* HERO */
 .contact-hero {
   position: relative;
-  height: 75vh;
+  height: 85vh;
   overflow: hidden;
 }
 
@@ -15,9 +15,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  margin-top: 90px;
 }
 
-.hero-overlay {
+.contact-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.6);
@@ -52,6 +53,7 @@ body {
   gap: 60px;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: -50px;
 }
 
 .contact-image {
@@ -61,6 +63,7 @@ body {
 .contact-image img {
   width: 100%;
   border-radius: 16px;
+  height: 400px;
 }
 
 .contact-form {
@@ -99,18 +102,19 @@ body {
 
 .contact-form button:hover {
   background: #e76f00;
-}
+} 
 
 /* OFFICE INFO */
 .office-info {
   padding: 100px 10%;
   background: #f9fafb;
   text-align: center;
+  margin-top: -140px;
 }
 
 .office-info h2 {
   font-size: 36px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .office-grid {
@@ -137,17 +141,17 @@ body {
 /* MAP */
 .map-section img {
   width: 100%;
-  height: 400px;
+  height:500px;
   object-fit: cover;
 }
-
+ 
 /* CTA */
 .contact-cta {
   padding: 100px 10%;
   text-align: center;
   background: #111827;
   color: white;
-}
+} 
 
 .contact-cta h2 {
   font-size: 36px;

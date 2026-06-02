@@ -1,6 +1,6 @@
 import React from "react";
 import "./WhatsappChat.css";
-import Logo from "../Images/Logo.png";
+import Logo from "../Images/Logooltechsolutions.png";
 
 const WhatsappChat = () => {
   const phoneNumber = "918130875594";
@@ -9,7 +9,7 @@ const WhatsappChat = () => {
 
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
     whatsappLink
-  )}`;
+  )}`; 
 
   return (
     <div className="whatsapp-page">

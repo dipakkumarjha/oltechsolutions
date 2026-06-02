@@ -1,30 +1,32 @@
 
 import React from "react";
 import "./Footer.css";
-import Logo from "../Images/Logo.png"
+import Logo from "../Images/Logooltechsolutions.png"
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="footer">
 
-      <div className="footer-top">
+      <div className="footer-top"> 
 
         {/* LEFT SECTION */}
         <div className="footer-left">
-          <img src={Logo} alt="Logo" className="logo" />
+          {/* <img src={Logo} alt="Logo" className="logo" /> */}
+          <h2 className="footer-text-logo">OL TECH SOLUTIONS<sup>®</sup></h2>
+
 
           <p className="footer-desc">
             Delivering secure, scalable and reliable IT infrastructure
             solutions to help businesses grow confidently in the digital era.
           </p>
 
-          <h4 className="follow">FOLLOW US :</h4>
+          <h4 className="follow">FOLLOW US :</h4> 
 
           <div className="social-icons">
-            <a href="https://www.facebook.com/dipak.babu.7161" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-            <a href="https://www.instagram.com/_dipu_lal/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://www.linkedin.com/in/dipak-kumar-vitbhopal/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+            <a href="https://www.facebook.com/oltechsolutionspvt" target="_blank" rel="noopener noreferrer"><FaFacebookF color="#1877F2"/></a>
+            <a href="https://www.instagram.com/_dipu_lal/" target="_blank" rel="noopener noreferrer"><FaInstagram color="#E1306C" /></a>
+            <a href="https://www.linkedin.com/company/79839608/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn color="#0A66C2" /></a>
           </div>
           <div className="mail">
             <h4 className="question">WE’RE HERE TO ANSWER YOUR QUESTIONS</h4>
@@ -42,6 +44,9 @@ const Footer = () => {
               <li><a href="/about">About Us</a></li>
               <li><a href="/career">Careers</a></li>
               <li><a href="/contact">Contact</a></li>
+              <li><a href="/privacy-policy">Privacy & Policy</a></li>
+              <li><a href="/terms-conditions">Terms & Conditions</a></li>
+              <li><a href="/blog">Blog</a></li>
             </ul>
           </div>
 
@@ -59,7 +64,13 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer-column map-column">
+
+
+
+
+
+
+          {/* <div className="footer-column map-column">
             <h5>OFFICE LOCATION</h5>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2512.5885064040576!2d77.37019827375227!3d28.626173384372635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce59930098e6f%3A0x85b44f30ce392fa7!2sOL%20TECH%20SOLUTIONS!5e1!3m2!1sen!2sin!4v1771399097660!5m2!1sen!2sin"
               // width="100%"
@@ -70,6 +81,11 @@ const Footer = () => {
               referrerPolicy="no-referrer-when-downgrade"
             >
             </iframe>
+          </div>  */} 
+
+          <div className="map-column">
+            <h5>OFFICE LOCATION</h5>
+            <p className="adress">Address: ITHUM TOWER, 616, Tower-C, Block A, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309</p>
           </div>
 
         </div>

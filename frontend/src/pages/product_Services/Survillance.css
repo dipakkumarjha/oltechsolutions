@@ -1,10 +1,223 @@
 .surveillance-page {
   font-family: "Inter", sans-serif;
   color: #1f2937;
+ 
 }
 
-/* SAME HERO / OVERVIEW / FEATURES / BENEFITS / CONTACT */
-/* 👉 Tum previous CSS copy paste kar do (same classes) */
+.surv-hero {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  overflow: hidden;
+  /* margin-top: 160px; */
+}
+
+.surv-hero video {
+  position: absolute;
+  margin-top: 90px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* REMOVE SHADE */
+.surv-hero-overlay {
+  display: none;
+}
+
+/* CONTENT OVER VIDEO */ 
+.surv-hero-content {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  /* max-width: 600px; */
+  z-index: 2;
+  color: #000000;
+}
+ 
+/* TEXT VISIBILITY WITHOUT SHADE */
+.surv-hero-content h1 {
+  font-size: 42px; 
+  margin-bottom: 15px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.surv-hero-content p {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #000 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ================= HERO BUTTONS ================= */
+
+.surv-hero-buttons{
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    max-width: fit-content;
+    gap: 20px;
+    flex-direction: column;
+    margin-top: 350px;
+
+    /* REMOVE THIS */
+    /* margin-left: 700px; */
+
+    flex-wrap: nowrap;
+}
+ 
+/* BUTTON COMMON */
+
+.surv-demo-btn,
+.surv-whatsapp-btn{
+    padding: 14px 30px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+/* BOOK DEMO */
+
+.surv-demo-btn{
+    background: #13518C;
+    color: white;
+}
+
+/* WHATSAPP */
+
+.surv-whatsapp-btn{
+    background: #25D366;
+    color: white;
+}
+
+/* HOVER */
+
+.surv-demo-btn:hover,
+.surv-whatsapp-btn:hover{
+    transform: translateY(-2px);
+}
+
+/* MOBILE */
+
+@media (max-width: 480px){
+
+    .surv-hero-buttons{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 10px;
+
+        margin-top: 500px;
+        /* flex-direction: column; */
+        flex-wrap: nowrap;
+    }
+
+    .surv-demo-btn,
+    .surv-whatsapp-btn{
+        width: auto;
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+}
+
+
+
+/* ================= OVERVIEW ================= */
+.surv-overview {
+  padding: 80px 8%;
+  margin-top: -40px;
+}
+
+.surv-overview-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  
+}
+
+.surv-overview-text,
+.surv-overview-image {
+  flex: 1 1 500px;
+  color: #000;
+}
+.surv-overview-text p{ 
+  text-align: justify;
+}
+
+.surv-overview-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+ 
+
+.surv-features {
+  padding: 100px 10%;
+  background: #f9fafb;
+  text-align: center;
+  margin-top: -100px;
+}
+
+.surv-features h2 {
+  font-size: 36px;
+  /* margin-bottom: 20px; */
+  margin: -60px 0 20px; 
+}
+
+.surv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.surv-card {
+  background: rgb(104, 74, 113);
+  color: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.surv-card h3 { 
+  margin-bottom: 15px; 
+}
+.surv-card p{
+  text-align: justify;
+}
+
+.surv-card:hover {
+  transform: translateY(-10px);
+  color: cadetblue;
+}
+
+
 
 /* ================= OEM SECTION ================= */
 .oem-section {
@@ -39,7 +252,7 @@
 
 .oem-box span {
   display: inline-block;
-  margin: 8px;
+  margin: 8px; 
   padding: 8px 14px;
   background: #e5e7eb;
   border-radius: 20px;
@@ -50,4 +263,318 @@
 .oem-box span:hover {
   background: #fb8500;
   color: white;
+}
+
+
+
+/* =========Benefits============= */
+
+.surv-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f8f9fb;
+}
+
+.surv-section h2 {
+  margin:-100px 0 30px;
+  font-size: 26px;
+  color: #222;
+}
+
+/* Grid */
+.surv-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+.surv-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.surv-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Text */
+.surv-card h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #000000;
+}
+ 
+.surv-card p {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .surv-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .surv-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.surv-slider-wrapper {
+  padding: 80px 0;
+  text-align: center;
+  background: #fff;
+  background: transparent;
+  overflow: hidden; 
+  margin-top: -100px;
+}
+
+.surv-slider-wrapper h2 {
+  margin-bottom: 60px;
+}
+
+.surv-slider-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.surv-slider-card {
+  min-width: 150px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.surv-slider-card img {
+  width: 50%;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .surv-slider-card {
+    min-width: 130px;
+    height: 100px;
+  }
+} 
+
+
+
+/* ========== VIDEO CONTACT SECTION ========== */
+.surv-contact {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.surv-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Dark overlay */
+.surv-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+
+/* Content center */
+.surv-contact-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.surv-contact-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.surv-contact-content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #e5e7eb;
+}
+
+/* Button */
+.surv-contact-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #fb8500;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.surv-contact-btn:hover {
+  background: #e76f00;
+  transform: translateY(-3px);
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 992px) {
+
+  .surv-headings h3 {
+    font-size: 30px;
+  }
+
+  .surv-headings p {
+    font-size: 14px;
+  }
+
+  .surv-card {
+    padding: 30px 40px;
+  }
+}
+/* ================= CONTACT MOBILE FIX ================= */
+
+@media (max-width: 768px) {
+
+  .surv-contact {
+    height: auto;              /* ❌ 45vh hata */
+    min-height: 60vh;          /* ✅ proper space */
+    padding: 40px 15px;        /* spacing */
+  }
+
+  .surv-contact-content {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .surv-contact-content h1 {
+    font-size: clamp(22px, 5vw, 28px);
+    line-height: 1.3;
+  }
+
+  .surv-contact-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .surv-contact-btn {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .surv-contact {
+    min-height: 65vh;
+  }
+
+  .surv-contact-content h1 {
+    font-size: 20px;
+  }
+} 
+
+
+/* =========================
+   FAQ SECTION
+========================= */
+
+.surv-faq-section{
+     width:100%;
+    padding:80px 8%;
+    background:#f8f9fb;
+}
+
+.surv-faq-section h2{
+    text-align:center;
+    font-size:2.2rem;
+    font-weight:700;
+    color:#1f2937;
+    margin-bottom:40px;
+    margin-top: -90px;
+}
+
+.surv-faq-list{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.surv-faq-list dt{
+    font-size:1.2rem;
+    font-weight:700;
+    color:#111827;
+    margin-top:24px;
+    margin-bottom:10px;
+}
+.surv-faq-list dt:first-child{
+    margin-top:0;
+}
+
+.surv-faq-list dd{
+     margin-left:0;
+    padding:18px 22px;
+    background:#ffffff; 
+    border-radius:12px;
+    line-height:1.8;
+    color:#4b5563;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+
+
+@media(max-width:768px){
+
+    .surv-faq-section{ 
+        padding:60px 20px;
+    }
+
+    .surv-faq-section h2{
+        font-size:30px;
+    }
+
+    .surv-faq-list dt{
+        font-size:18px;
+    }
+
+    .surv-faq-list dd{
+        font-size:15px;
+    }
 }

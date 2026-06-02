@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
-import aboutUs from '../Images/aboutUs.jpg'
-import photo from "../Images/photo.jpg"
+import aboutUs from '../Images/aboutUsoltechsolutions.jpg'
+import photo from "../Images/photooltechsolutions.jpg"
 import aboutVideo from "../Images/aboutVideo.mp4"
 import "./About.css"
 import Footer from '../components/Footer'
@@ -15,10 +15,10 @@ const About = () => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 1;
     }
-  }, []);
+  }, []); 
   return (
     <>
-        <Slider/>
+        {/* <Slider/> */}
       <div className='headings'>
         <img src={aboutUs} alt='About Us' />
         <h3>We Are OL Tech Solutions</h3>
@@ -26,7 +26,7 @@ const About = () => {
           our values of growing with our people, communities, and customers.</p>
       </div>
 
-
+ 
 
       {/* WHO WE ARE */}
       <section className="about-section">
@@ -34,7 +34,13 @@ const About = () => {
           <div className="about-text">
             <h2>Who We Are</h2>
             <p>
-              OL Tech Solutions is a leading IT service provider specializing in networking, managed WiFi, hardware solutions, and enterprise IT infrastructure. We help businesses build reliable, secure, and scalable technology environments tailored to their needs. With a strong focus on quality, innovation, and customer satisfaction, we deliver solutions that empower organizations to grow in the digital era.
+              OL Tech Solutions is a trusted provider of end-to-end IT infrastructure and technology services, committed to empowering businesses with secure, scalable, and future-ready solutions. With a strong focus on innovation and reliability, we deliver a wide range of services including Cyber Security, Hardware & Software Solutions, CCTV & Biometric Systems, Wi-Fi (LAN/WAN/MAN) Networking, Servers, and Workstations (Laptops & Desktops).
+
+Our approach is centered on understanding client requirements and delivering customized solutions that enhance operational efficiency, data security, and business continuity. We partner with leading global technology brands to ensure high-quality implementation and long-term support.
+
+At OL Tech Solutions, we believe technology should not just support your business—it should drive growth. Our team of experienced professionals ensures seamless integration, proactive maintenance, and continuous optimization of your IT ecosystem.
+
+Whether you're a startup or an enterprise, OL Tech Solutions is your reliable technology partner in building a smarter, secure, and digitally empowered future.
             </p>
           </div>
 
@@ -45,29 +51,33 @@ const About = () => {
       </section>
 
 
-      <div className='card-wrapper'>
-        <div className='card'>
+      <div className='about-card-wrapper'>
+        <div className='about-card'>
           <p>Business Setup</p>
           <h2>2017</h2>
         </div>
 
-        <div className='card'>
+        <div className='about-card'>
           <p>Serving Customers</p>
           <h2>45+ industries</h2>
         </div>
-
+ 
       </div>
 
       {/* MISSION VISION */}
       <section className="about-mv">
         <div className="mv-box">
           <h3>Our Mission</h3>
-          <p>Our mission is to deliver reliable, secure, and scalable IT solutions that help businesses grow and succeed in a digital world. We aim to provide high-quality networking, hardware, and managed services with a strong focus on innovation, customer satisfaction, and long-term partnerships.</p>
-        </div>
+          <p>At OL Tech Solutions, our mission is to deliver innovative, secure, and scalable IT solutions that empower businesses to succeed in a fast-evolving digital world. We provide end-to-end services including Cyber Security, Networking (LAN/WAN/Wi-Fi), Hardware, Software, Servers, CCTV, and Biometric Systems, ensuring reliability, performance, and long-term value.
 
+We are committed to building future-ready IT infrastructure that enhances efficiency, strengthens security, and supports continuous business growth.</p>
+        </div>
+ 
         <div className="mv-box">
           <h3>Our Vision</h3>
-          <p>At OL Tech Solutions, our vision is to lead the future of digital transformation by providing innovative, reliable, and scalable technology solutions. We strive to build long-term relationships with our clients and become their most trusted IT partner.</p>
+          <p>Our vision is to become a leading and trusted global technology partner, known for delivering intelligent, high-performance, and future-driven IT solutions. We aim to set new standards in innovation, reliability, and customer satisfaction by continuously evolving with the latest technologies.
+
+At OL Tech Solutions, we envision a future where businesses operate with smarter, more secure, and seamlessly integrated digital ecosystems.</p>
         </div>
       </section>
 
@@ -106,19 +116,19 @@ const About = () => {
           
         </div>
       </section>
+ 
 
-
-      <div className='contact'>
+      <div className='about-contact'>
         <video ref={videoRef} autoPlay loop muted className="video">
           <source src={aboutVideo} type="video/mp4" />
         </video>
 
-        <div className="overlay"></div>
+        <div className="about-overlay"></div>
 
-        <div className="contact-content">
+        <div className="about-contact-content">
           <h1>Unlock the Power of OL Tech For Your Business</h1>
           <p>Connect with our experts today to accelerate your business with technology.</p>
-          <Link to="/contact" className="contact-btn">
+          <Link to="/contact" className="about-contact-btn">
             Contact Us
           </Link>
         </div>

@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;              /* FIXED */
   height: 70px;
-  background: #fff;
+  background: #ffffff;
   z-index: 9999;
   overflow: hidden;
   border-bottom: 1px solid #eee;
@@ -14,13 +14,14 @@
 .gov-slider-track {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 100%;
-  width: max-content;
-  animation: govScroll 20s linear infinite;
+  width: 100%;
+  animation: govScroll 15s linear infinite;
 }
-
+ 
 .gov-slider-card {
-  flex: 0 0 auto;
+  flex: 0 0 auto; 
   width: 120px;
   height: 100%; 
   display: flex;

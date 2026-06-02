@@ -1,18 +1,18 @@
 import React, { useEffect, useRef } from "react";
 import "./Services.css";
-import wifi from "../Images/productImg/wifi.png"
+// import wifi from "../Images/productImg/wifi.png"
 import ServiceVideo from "../Images/ServiceVideo.mp4"
 import Footer from "../components/Footer";
 import aboutVideo from "../Images/aboutVideo.mp4"
 import { Link } from "react-router-dom";
-import WifiImg from "../Images/WifiImg.jpg"
-import SecurityImg from "../Images/SecurityImg.jpg"
-import CommImg from "../Images/CommImg.jpg"
-import SoftwareImg from "../Images/SoftwareImg.jpg"
-import HardwareImg from "../Images/HardwareImg.png"
-import DataImg from "../Images/DataImg.jpg"
-import TeleImg from "../Images/TeleImg.png"
-import SurvImg from "../Images/SurvImg.png"
+import WifiImg from "../Images/WifiImgoltechsolutions.jpg"
+import SecurityImg from "../Images/SecurityImgoltechsolutions.jpg"
+import CommImg from "../Images/CommImgoltechsolutions.jpg"
+import SoftwareImg from "../Images/SoftwareImgoltechsolutions.jpg"
+import HardwareImg from "../Images/HardwareImgoltechsolutions.png"
+import DataImg from "../Images/DataImgoltechsolutions.jpg"
+import TeleImg from "../Images/TeleImgoltechsolutions.png"
+import SurvImg from "../Images/SurvImgoltechsolutions.png"
 import Slider from "../components/Slider";
 const ProductsServices = () => {
 
@@ -27,7 +27,7 @@ const ProductsServices = () => {
 
   return (
     <>
-    <Slider/>
+    {/* <Slider/> */}
     <div className="products-page">
 
       {/* HEADER */}
@@ -61,8 +61,11 @@ const ProductsServices = () => {
           <ul>
             <li>Enterprise WiFi deployment</li>
             <li>Secure authentication</li>
-            <li>Central monitoring</li>
+            <li>Centralized network monitoring & management</li>
             <li>High-speed performance</li>
+            <li>Bandwidth optimization & traffic control</li>
+            <li>Scalable infrastructure for growing businesses</li>
+            <li>Cloud-managed WiFi solutions</li>
           </ul>
           <Link to="/managed-wifi"><button className="learn-btn">Learn More</button></Link>
           
@@ -80,12 +83,15 @@ const ProductsServices = () => {
           <h2>Manage Security</h2>
           <p>Scalable and secure cloud infrastructure.</p>
           <ul>
-            <li>Cloud migration</li>
-            <li>Secure storage</li>
-            <li>Backup & recovery</li>
-            <li>Cloud management</li>
+            <li>End-to-end Cyber Security solutions</li>
+            <li>Network security & firewall management</li>
+            <li>Endpoint security for devices & systems</li>
+            <li>Cloud security & compliance management</li>
+            <li>Data protection & encryption solutions</li>
+            <li>Secure access control & identity management</li>
+            <li>Scalable security solutions for enterprises</li>
           </ul>
-          <Link to="/cloud-data-center"><button className="learn-btn">Learn More</button></Link>
+          <Link to="/manage-security"><button className="learn-btn">Learn More</button></Link>
           
         </div>
       </div>
@@ -101,12 +107,15 @@ const ProductsServices = () => {
           <h2>Manage Communication</h2>
           <p>Protect your business from cyber threats.</p>
           <ul>
-            <li>Threat protection</li>
-            <li>Endpoint security</li>
-            <li>24/7 monitoring</li>
-            <li>Data protection</li>
+            <li>Unified communication & collaboration solutions</li>
+            <li>VoIP and IP telephony systems</li>
+            <li>Real-time communication & connectivity</li>
+            <li>Scalable communication infrastructure</li>
+            <li>Integration with enterprise tools & systems</li>
+            <li>Secure business communication networks</li>
+            <li>24/7 support & performance monitoring</li>
           </ul>
-          <Link to="/manage-security"><button className="learn-btn">Learn More</button></Link>
+          <Link to="/communication-collaboration"><button className="learn-btn">Learn More</button></Link>
           
         </div>
       </div>
@@ -122,10 +131,14 @@ const ProductsServices = () => {
           <h2>Software & Licence</h2>
           <p>Advanced firewall protection for networks.</p>
           <ul>
-            <li>Network security</li>
-            <li>Threat prevention</li>
-            <li>Access control</li>
-            <li>Real-time monitoring</li>
+            <li>Software license management & compliancey</li>
+            <li>Microsoft, Adobe, and enterprise licensing solutions</li>
+            <li>License optimization & cost control</li>
+            <li>Software asset management (SAM)</li>
+            <li>Renewal tracking & lifecycle management</li>
+            <li>Secure software installation & updates</li>
+            <li>Vendor management & negotiation support</li>
+           
           </ul>
           <Link to="/software-licence"><button className="learn-btn">Learn More</button></Link>
           
@@ -143,15 +156,18 @@ const ProductsServices = () => {
           <h2>Hardware pheripheral</h2>
           <p>Modern and scalable infrastructure solutions.</p>
           <ul>
-            <li>Server setup</li>
-            <li>Network setup</li>
-            <li>Data center setup</li>
-            <li>Infrastructure management</li>
+            <li>Enterprise-grade hardware solutions</li>
+            <li>Laptops, desktops & workstations</li>
+            <li>Servers & storage infrastructure</li>
+            <li>Networking devices (routers, switches, access points)</li>
+            <li>Printers, scanners & office peripherals</li>
+            <li>Performance optimization & upgrades</li>
+            <li>Scalable infrastructure for business growth</li>
           </ul>
-          <Link to="/it-infra"><button className="learn-btn">Learn More</button></Link>
+          <Link to="/hardware"><button className="learn-btn">Learn More</button></Link>
           
         </div>
-      </div>
+      </div> 
 
 
       {/* 6 Cloud & Data Center */}
@@ -164,12 +180,15 @@ const ProductsServices = () => {
           <h2>Cloud & Data Center</h2>
           <p>Reliable IT support for smooth operations.</p>
           <ul>
-            <li>24/7 support</li>
-            <li>Remote assistance</li>
-            <li>System maintenance</li>
-            <li>Issue resolution</li>
+            <li>Cloud infrastructure setup & management</li>
+            <li>Data center design & deployment</li>
+            <li>Secure data storage & backup solutions</li>
+            <li>Disaster recovery & business continuity</li>
+            <li>Cloud migration & integration services</li>
+            <li>Scalable solutions for growing enterprises</li>
+            <li>24/7 monitoring & performance management</li>
           </ul>
-          <Link to="/it-architecture"><button className="learn-btn">Learn More</button></Link>
+          <Link to="/cloud-data-center"><button className="learn-btn">Learn More</button></Link>
           
         </div>
       </div>
@@ -184,12 +203,15 @@ const ProductsServices = () => {
           <h2>Surveillance Solution</h2>
           <p>Reliable IT support for smooth operations.</p>
           <ul>
-            <li>24/7 support</li>
-            <li>Remote assistance</li>
-            <li>System maintenance</li>
-            <li>Issue resolution</li>
+            <li>CCTV camera installation & monitoring systems</li>
+            <li>Biometric access control & attendance systems</li>
+            <li>HD & IP-based surveillance solutions</li>
+            <li>Real-time video monitoring & recording</li>
+            <li>Smart analytics & motion detection</li>
+            <li>Integrated security with alarms & sensors</li>
+            <li>Real-time video monitoring & recording</li>
           </ul>
-          <Link to="/it-architecture"><button className="learn-btn">Learn More</button></Link>
+          <Link to="/surveillance"><button className="learn-btn">Learn More</button></Link>
           
         </div>
       </div>
@@ -205,12 +227,15 @@ const ProductsServices = () => {
           <h2>Telecom Services</h2>
           <p>Reliable IT support for smooth operations.</p>
           <ul>
-            <li>24/7 support</li>
-            <li>Remote assistance</li>
-            <li>System maintenance</li>
-            <li>Issue resolution</li>
+            <li>Business telecom solutions & infrastructure</li>
+            <li>Voice, data & internet connectivity services</li>
+            <li>High-speed broadband & leased lines</li>
+            <li>Network design & telecom integration</li>
+             <li>Secure and uninterrupted connectivity</li>
+            <li>PRI lines & enterprise telephony systems</li>
+            <li>24/7 support & service management</li>
           </ul>
-          <Link to="/it-architecture"><button className="learn-btn">Learn More</button></Link>
+          <Link to="/telecom"><button className="learn-btn">Learn More</button></Link>
           
         </div>
       </div>
@@ -219,17 +244,17 @@ const ProductsServices = () => {
 
     </div>
 
-    <div className='contact'>
+    <div className='services-contact'>
         <video ref={videoRef} autoPlay loop muted className="video">
           <source src={aboutVideo} type="video/mp4" />
         </video>
+ 
+        <div className="services-overlay"></div>
 
-        <div className="overlay"></div>
-
-        <div className="contact-content">
+        <div className="services-contact-content">
           <h1>Unlock the Power of OL Tech For Your Business</h1>
           <p>Connect with our experts today to accelerate your business with technology.</p>
-          <Link to="/contact" className="contact-btn">
+          <Link to="/contact" className="services-contact-btn">
             Contact Us
           </Link>
         </div>

@@ -1,21 +1,21 @@
 import React, { useEffect, useRef } from "react";
 import "./Partnerships.css";
 import BgVideo from "../Images/BgVideo.mp4";
-import Logo from "../Images/Logo.png"
+// import Logo from "../Images/Logooltechsolutions.png" 
 import aboutVideo from "../Images/aboutVideo.mp4";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import PartnerVideo from "../Images/PartnerVideo.mp4"
-import Cisco from "../pages/OemImg/Cisco.png"
-import Ruckus from "../pages/OemImg/Ruckus.png"
-import Bosch from "../pages/OemImg/Bosch.png"
-import Sophos from "../pages/OemImg/Security/Sophos.jpg"
-import dell from "../pages/OemImg/Hardware/dell.png"
-import HP from "../pages/OemImg/Hardware/HP.jpg"
-import Polycom from "../pages/OemImg/Communication/Polycom.png"
-import Fortinet from "../pages/OemImg/Fortinet.png"
-import Commvault from "../pages/OemImg/Commvault.png"
-import DLink from "../pages/OemImg/DLink.png"
+import Cisco from "../pages/OemImg/Ciscooltechsolutions.png"
+import Ruckus from "../pages/OemImg/Ruckusoltechsolutions.png"
+import Bosch from "../pages/OemImg/Boscholtechsolutions.png"
+import Sophos from "../pages/OemImg/Security/Sophosoltechsolutions.jpg"
+import dell from "../pages/OemImg/Hardware/delloltechsolutions.png"
+import HP from "../pages/OemImg/Hardware/HPoltechsolutions.png"
+import Polycom from "../pages/OemImg/Communication/Polycomoltechsolutions.png"
+import Fortinet from "../pages/OemImg/Fortinetoltechsolutions.png"
+import Commvault from "../pages/OemImg/Commvaultoltechsolutions.png"
+import DLink from "../pages/OemImg/DLinkoltechsolutions.png"
 import Slider from "../components/Slider";
 
 const partners = [
@@ -83,7 +83,7 @@ const Partnership = () => {
 
   return (
     <>
-    <Slider/>
+    {/* <Slider/> */}
       <div className="partnership-page">
 
         {/* HERO SECTION */}
@@ -150,50 +150,32 @@ const Partnership = () => {
         </div>
 
 
-        {/* ===== PARTNER LOGO SLIDER ===== */}
-
-        <div className="logo-slider-section">
-
-          <h2 className="section-title">
-            Our Trusted Technology Partners
-          </h2>
-
-          <div className="logo-slider">
-
-            <div className="logo-track">
-
-              {/* first set */}
-              {partners.map((partner, index) => (
-                <div className="logo-slide" key={"first" + index}>
-                  <img src={partner.logo} alt={partner.name} />
-                </div>
-              ))}
-
-              {/* duplicate set for infinite loop */}
-              {partners.map((partner, index) => (
-                <div className="logo-slide" key={"second" + index}>
-                  <img src={partner.logo} alt={partner.name} />
-                </div>
-              ))}
-
-            </div>
+       
+         {/* ==================Slider Section ============================ */}
+        < section className="partner-slider-wrapper" >
+          <h2 >Building Innovative Businesses with Strong Alliance and Business Partners</h2>
+          <div className="partner-slider-track">
+            {partners.concat(partners).map((img, index) => (
+              <div className="partner-slider-card" key={index}>
+                <img src={img.logo} alt="sllider" />
+              </div>
+            ))}
 
           </div>
+        </section >
 
-        </div>
 
-
-        <div className='contact'>
+        <div className='partnership-contact'>
           <video ref={videoRef} autoPlay loop muted className="video">
             <source src={aboutVideo} type="video/mp4" />
           </video>
 
-          <div className="overlay"></div>
+          <div className="partnership-overlay"></div>
 
-          <div className="contact-content">
+          <div className="partnership-contact-content">
             <h1>Unlock the Power of OL Tech For Your Business</h1>
             <p>Connect with our experts today to accelerate your business with technology.</p>
-            <Link to="/contact" className="contact-btn">
+            <Link to="/contact" className="partnership-contact-btn">
               Contact Us
             </Link>
           </div>

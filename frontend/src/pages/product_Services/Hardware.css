@@ -4,16 +4,17 @@
 }
 
 /* ================= HERO ================= */
-.wifi-hero {
+.hardware-hero {
   position: relative;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
 }
 
-.hero-img {
+.hardware-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; 
+  margin-top: 85px;
 }
 
 .hero-overlay {
@@ -22,28 +23,238 @@
   background: rgba(0,0,0,0.6);
 }
 
-.hero-content {
+.hardware-hero-content {
   position: absolute;
   top: 50%;
-  left: 10%;
+ 
   transform: translateY(-50%);
   color: white;
-  max-width: 600px;
+  /* max-width: 600px; */
 }
 
-.hero-content h1 {
+.hardware-hero-content h1 {
   font-size: 48px;
   margin-bottom: 20px;
-  color: #ffffff !important;
+  color:#13518C !important;
+  top: -50px;
+  margin-left: 140px;
+  text-shadow: 0 4px 15px rgb(215, 139, 139);
 }
 
-.hero-content p {
-  font-size: 18px;
-  color: #ffffff !important;
+.hardware-hero-content p {
+  font-size: 25px;
+  font-weight: 600;
+  color: #000000 !important;
+  margin-left: 140px;
+   text-shadow: 0 4px 15px rgb(245, 5, 5);
+}
+
+/* ================= HERO BUTTONS ================= */
+
+.hardware-hero-buttons{
+    position: absolute;
+
+    bottom: 10px;
+    /* left: 50%; */
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 20px;
+    max-width: fit-content;
+    margin-left: 115px;
+    flex-wrap: wrap;
+} 
+
+/* COMMON BUTTON STYLE */
+
+.hardware-demo-btn,
+.hardware-whatsapp-btn{
+
+    padding: 14px 30px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+
+    transition: 0.3s ease;
+}
+
+/* BOOK DEMO */
+
+.hardware-demo-btn{
+    background: #13518C;
+    color: white;
+}
+
+/* WHATSAPP */
+
+.hardware-whatsapp-btn{
+    background: #25D366;
+    color: white;
+}
+
+/* HOVER */
+
+.hardware-demo-btn:hover,
+.hardware-whatsapp-btn:hover{
+    transform: translateY(-2px);
+}
+
+/* MOBILE */
+
+@media (max-width: 480px){
+
+    .hardware-hero-buttons{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hardware-demo-btn,
+    .hardware-whatsapp-btn{
+        width: 90%;
+        text-align: center;
+    }
+}
+
+
+
+/* ============Services Card======================== */
+/* SERVICES */
+.hardware-card-services {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.hardware-card-services h2 {
+  font-size: 26px;
+  margin-top: -60px;
+ 
+
+}
+
+.hardware-services-card p{
+ 
+  font-size: 15px;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hardware-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.hardware-services-card { 
+  background: white;
+  padding: 2%;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.4s;
+  margin-top: 40px;
+}
+
+.hardware-services-card p {
+  text-align: justify;
+}
+ 
+.hardware-services-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hardware-services-card h3 {
+  margin: 20px 0 10px;
+}
+
+.hardware-services-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+
+@media (max-width: 992px) {
+  .hardware-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .hardware-card-services h2 {
+    font-size: 24px;
+    margin-top: -30px;
+  }
+
+  .hardware-services-card img {
+    height: 170px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hardware-card-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hardware-card-services {
+    padding: 60px 5%;
+  }
+
+  .hardware-card-services h2 {
+    font-size: 22px;
+    margin-top: 0;
+  }
+
+  .hardware-services-card h3 {
+    font-size: 18px;
+  }
+
+  .hardware-services-card p {
+    font-size: 14px;
+  }
+
+  .hardware-services-card img {
+    height: 200px;
+  }
+} 
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .hardware-card-services h2 {
+    font-size: 20px;
+  }
+
+  .hardware-services-card img {
+    height: 180px;
+  }
+
+  .hardware-services-card {
+    border-radius: 10px;
+  }
 }
 
 /* ================= OVERVIEW ================= */
-.wifi-overview {
+.hardware-overview {
   padding: 100px 10%;
 }
 
@@ -52,6 +263,7 @@
   gap: 60px;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: -100px;
 }
 
 .overview-text {
@@ -59,13 +271,14 @@
 }
 
 .overview-text h2 {
-  font-size: 36px;
+  font-size: 26px;
   margin-bottom: 20px;
 }
 
-.overview-text p {
+.overview-text p { 
   margin-bottom: 15px;
   line-height: 1.6;
+  color: #000000;
 }
 
 .overview-image {
@@ -78,272 +291,540 @@
 }
 
 /* ================= FEATURES ================= */
-.wifi-features {
+.hardware-features {
   padding: 100px 10%;
   background: #ffffff;
   text-align: center;
+  margin-top: -160px;
+  
 }
 
-.wifi-features h2 {
+.hardware-features h2 {
   font-size: 36px;
   margin-bottom: 60px;
 }
 
-.features-grid {
+.hardware-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
 
-.feature-card {
-  background: rgb(129, 95, 141);
-  color: white; 
+.hardware-card {
+  /* background: rgb(129, 95, 141); */
+  color: rgb(0, 0, 0); 
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
 
-.feature-card h3 {
+.hardware-card h3 {
+  margin-top: -60px;
   margin-bottom: 15px;
+  color: rgb(28, 31, 113);
 }
-.feature-card p{
+.hardware-card p{
   color: #000000;
 }
 
-.feature-card:hover {
+.hardware-card:hover {
   transform: translateY(-10px);
   color: cadetblue;
 }
 
-/* ================= SLIDER ================= */
-.slider-wrapper {
-  width: 100%;
-  overflow: hidden;
-  padding: 90px 0 70px 0;
-  background: #ffffff;
-}
 
-.slider-wrapper h2 {
+/* =====TOP BENEFIT ============== */
+
+.hardware-benefit {
+  padding: 40px 20px;
   text-align: center;
-  font-weight: 700;
-  color: #000000;
-  margin-bottom: 80px;
+  margin-top: -140px;
 }
 
-.slider-track {
+.hardware-benefit h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+
+}
+
+.hardware-benefit > p {
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+/* Grid */
+.hardware-grid-benefit {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  /* background: #000; */
+}
+
+/* Card */
+.hardware-benefit-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background: #ffffff; 
+  color: rgb(28, 31, 113);
+   /*#5b3961  */
+}
+
+/* Text */
+.hardware-benefit-card {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.hardware-benefit-card {
+  font-size: 14px;
+  color: #000000;
+}
+ 
+/* Tablet */
+@media (max-width: 992px) {
+  .hardware-grid-benefit {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hardware-grid-benefit {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ================= SLIDER ================= */
+.hardware-slider-wrapper {
+  padding: 80px 0;
+  text-align: center;
+  background: #fff;
+  background: transparent;
+  overflow: hidden; 
+  margin-top: -100px;
+}
+
+.hardware-slider-wrapper h2 {
+  margin-bottom: 40px;
+}
+
+.hardware-slider-track {
   display: flex;
+  gap: 20px;
   width: max-content;
   animation: scroll 25s linear infinite;
 }
 
-.slider-card {
-  min-width: 160px;
-  height: 120px;
-  background: #fff;
-  border-radius: 14px;
-  margin: 0 12px;
+.hardware-slider-card {
+  min-width: 150px;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
 }
 
-.slider-card img {
-  width: 70%;
-  height: auto;
-  object-fit: contain;
-}
-
-.slider-card:hover {
-  transform: translateY(-8px) scale(1.05);
+.hardware-slider-card img {
+  width: 50%;
 }
 
 @keyframes scroll {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
 }
 
-/* ================= BENEFITS ================= */
-.hardware-benefits {
-  padding: 100px 10%;
+
+/* ================= HARDWARE CHOOSE ================= */
+
+.hardware-choose {
+  padding: 80px 8%;
+  background: #f9fafb;
+  margin-top: -80px;
 }
 
-.benefits-container {
+/* CONTAINER */
+.hardware-choose-container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
-  gap: 60px;
   align-items: center;
+  justify-content: space-between;
+  gap: 90px;
   flex-wrap: wrap;
 }
-
-.benefits-text {
-  flex: 1;
+ 
+/* IMAGE */
+.hardware-choose-image {
+  /* flex: 1 1 500px; */
+  display: flex;
+  justify-content: center;
 }
 
-.benefits-text h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+.hardware-choose-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
   
 }
 
-.benefits-text ul {
+/* TEXT */
+.hardware-choose-text {
+  flex: 1 1 500px;
+}
+
+.hardware-choose-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.hardware-choose-text ul {
   list-style: none;
   padding: 0;
 }
 
-.benefits-text li {
-  margin-bottom: 15px;
-  font-size: 16px;
+.hardware-choose-text li {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.benefits-image {
-  flex: 1;
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+  .hardware-choose {
+    padding: 60px 20px;
+  }
+
+  .hardware-choose-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hardware-choose-text h2 {
+    font-size: 28px;
+  }
+
+  .hardware-choose-text li {
+    justify-content: center;
+  }
 }
 
-.benefits-image img {
-  width: 100%;
-  border-radius: 16px;
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+
+  .hardware-choose-text h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .hardware-choose-text li {
+    font-size: 15px;
+  }
+
+  .hardware-choose{
+    margin-bottom: -300px;
+  }
 }
 
-/* ================= USE CASE ================= */
-.wifi-usecase {
-  padding: 100px 10%;
-  background: #f9fafb;
+
+/* ================= HARDWARE USECASE ================= */
+
+.hardware-usecase {
+  padding: 70px 8%;
+  background: #f8f9fb;
   text-align: center;
 }
 
-.usecase-grid {
+/* HEADING */
+.hardware-usecase h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #1e293b;
+  margin-top: -120px;
+}
+
+/* GRID */
+.hardware-usecase-grid {
+  max-width: 1000px;
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
 }
 
-.usecase-grid div {
-  background: white;
-  padding: 30px;
+/* CARD */
+.hardware-usecase-grid div {
+  background: #ffffff;
+  padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.usecase-grid div:hover {
-  transform: translateY(-5px);
+/* HOVER */
+.hardware-usecase-grid div:hover {
+  transform: translateY(-6px);
+  background: #2563eb;
+  color: #fff;
 }
 
-/* ================= CONTACT ================= */
-.contact {
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+  .hardware-usecase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .hardware-usecase {
+    padding: 40px 15px; /* gap reduce */
+  }
+
+  .hardware-usecase h2 {
+    font-size: 24px;
+  }
+
+  .hardware-usecase-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .hardware-usecase-grid div {
+    font-size: 14px;
+    padding: 18px;
+  }
+}
+
+
+/* ========== VIDEO CONTACT SECTION ========== */
+.hardware-contact {
   position: relative;
-  height: 60vh;
+  height: 50vh;
+  width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.video {
+.hardware-video {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.overlay {
+/* Dark overlay */
+.hardware-overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
-.contact-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+/* Content center */
+.hardware-contact-content {
+  position: relative;
+  z-index: 3;
   text-align: center;
-  color: white;
+  color: #ffffff;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
-.contact-content h1 {
-  font-size: 36px;
+.hardware-contact-content h1 {
+  font-size: 42px;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
-.contact-content p {
-  margin-bottom: 20px;
+.hardware-contact-content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #e5e7eb;
 }
 
-.contact-btn {
-  padding: 12px 30px;
+/* Button */
+.hardware-contact-btn {
+  display: inline-block;
+  padding: 14px 36px;
   background: #fb8500;
-  color: white;
-  border-radius: 6px;
+  color: #ffffff;
   text-decoration: none;
-  transition: 0.3s;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s ease;
 }
 
-.contact-btn:hover {
+.hardware-contact-btn:hover {
   background: #e76f00;
+  transform: translateY(-3px);
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1024px) {
-  .hero-content h1 {
-    font-size: 36px;
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 992px) {
+
+  .hardware-headings h3 {
+    font-size: 30px;
   }
 
-  .overview-text h2,
-  .wifi-features h2,
-  .benefits-text h2 {
-    font-size: 28px;
+  .hardware-headings p {
+    font-size: 14px;
+  }
+
+  .hardware-card {
+    padding: 30px 40px;
   }
 }
+/* ================= CONTACT MOBILE FIX ================= */
 
 @media (max-width: 768px) {
-  .hero-content {
-    left: 5%;
-    max-width: 90%;
+
+  .hardware-contact {
+    height: auto;              /* ❌ 45vh hata */
+    min-height: 60vh;          /* ✅ proper space */
+    padding: 40px 15px;        /* spacing */
   }
 
-  .hero-content h1 {
-    font-size: 28px;
+  .hardware-contact-content {
+    max-width: 100%;
+    padding: 0 10px;
   }
 
-  .hero-content p {
-    font-size: 16px;
+  .hardware-contact-content h1 {
+    font-size: clamp(22px, 5vw, 28px);
+    line-height: 1.3;
   }
 
-  .overview-container,
-  .benefits-container {
-    flex-direction: column;
+  .hardware-contact-content p {
+    font-size: 14px;
+    line-height: 1.5;
   }
 
-  .slider-card {
-    min-width: 130px;
-    height: 100px;
-  }
-
-  .contact-content h1 {
-    font-size: 24px;
+  .hardware-contact-btn {
+    padding: 12px 22px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .wifi-overview,
-  .wifi-features,
-  .wifi-benefits,
-  .wifi-usecase {
-    padding: 60px 5%;
+  .hardware-contact {
+    min-height: 65vh;
   }
 
-  .hero-content h1 {
-    font-size: 22px;
+  .hardware-contact-content h1 {
+    font-size: 20px;
   }
+} 
 
-  .feature-card {
-    padding: 25px;
-  }
+/* ================= FAQ SECTION ================= */
+
+.hardware-faq-section{
+    width:100%;
+    padding:80px 8%;
+    background:#f8f9fb;
 }
 
+.hardware-faq-section h2{
+    text-align:center;
+    font-size:2.2rem;
+    font-weight:700;
+    color:#1f2937;
+    margin-bottom:40px;
+    margin-top: -90px;
+}
 
+.hardware-faq-list{
+    max-width:1200px;
+    margin:0 auto;
+}
 
+.hardware-faq-list dt{
+    font-size:1.2rem;
+    font-weight:700;
+    color:#111827;
+    margin-top:24px;
+    margin-bottom:10px;
+}
+
+.hardware-faq-list dd{
+    margin-left:0;
+    padding:18px 22px;
+    background:#ffffff;
+    border-radius:12px;
+    line-height:1.8;
+    color:#4b5563;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+.hardware-faq-list dt:first-child{
+    margin-top:0;
+}
+
+@media(max-width:768px){
+
+    .hardware-faq-section{
+        padding:60px 5%;
+    }
+
+    .hardware-faq-section h2{
+        font-size:1.8rem;
+    }
+
+    .hardware-faq-list dt{
+        font-size:1.05rem;
+    }
+
+    .hardware-faq-list dd{
+        padding:15px;
+        font-size:0.95rem;
+        line-height:1.7;
+    }
+}
+
+@media(max-width:480px){
+
+    .hardware-faq-section h2{
+        font-size:1.6rem;
+    }
+
+    .hardware-faq-list dt{
+        font-size:1rem;
+    }
+
+    .hardware-faq-list dd{
+        font-size:0.9rem;
+    }
+}

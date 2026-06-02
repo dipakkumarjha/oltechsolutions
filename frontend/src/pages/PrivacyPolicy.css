@@ -1,0 +1,108 @@
+.privacy-wrapper {
+  width: 100%;
+  padding-top: 100px; /* navbar + slider fix */
+  padding-bottom: 50px;
+  background: #f4f7fb;
+  display: flex;
+  justify-content: center;
+}
+
+.privacy-container {
+  width: 100%;
+  max-width: 1000px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.privacy-container h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.effective-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.privacy-container h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #283e81;
+}
+
+.privacy-container h3 {
+  font-size: 16px;
+  margin-top: 15px;
+  color: #1e293b;
+}
+
+.privacy-container p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.privacy-container ul {
+  padding-left: 18px;
+}
+
+.privacy-container li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.contact-box {
+  margin-top: 15px;
+  padding: 15px;
+  background: #eef2ff;
+  border-radius: 8px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .privacy-container {
+    padding: 25px;
+  }
+
+  .privacy-container h1 {
+    font-size: 26px;
+  }
+
+  .privacy-container h2 {
+    font-size: 18px;
+  }
+
+  .privacy-container p,
+  .privacy-container li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-wrapper {
+    padding: 100px 10px 40px;
+  }
+
+  .privacy-container {
+    padding: 20px;
+  }
+
+  .privacy-container h1 {
+    font-size: 22px;
+  }
+
+  .privacy-container h2 {
+    font-size: 16px;
+  }
+
+  .privacy-container p,
+  .privacy-container li {
+    font-size: 13px;
+  }
+}

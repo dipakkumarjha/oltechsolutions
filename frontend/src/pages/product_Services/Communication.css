@@ -6,7 +6,7 @@
 
 .comm-hero{
   position: relative;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
 }
 
@@ -14,8 +14,9 @@
   width:100%;
   height:100%;
   object-fit:cover;
+  margin-top: 90px;
 }
-
+ 
 .hero-overlay{
   position:absolute;
   inset:0;
@@ -51,85 +52,172 @@
   color:#e5e7eb;
 }
 
-
 /* OVERVIEW */
 
 .comm-overview{
   padding:100px 10%;
+  margin-top: -150px;
 }
 
-.overview-container{
+.comm-overview-container{
   display:flex;
   gap:60px;
   align-items:center;
   flex-wrap:wrap;
 }
 
-.overview-text{
+.comm-overview-text {
   flex:1;
 }
+.comm-overview-text p{
+  text-align: justify;
+}
 
-.overview-text h2{
+.comm-overview-text h2{
   font-size:36px;
   margin-bottom:20px;
 }
 
-.overview-image{
+.comm-overview-image{
   flex:1;
 }
 
-.overview-image img{
+.comm-overview-image img{
   width:100%;
   border-radius:16px;
 }
 
 
+/* ================= HERO BUTTONS ================= */
 
+.comm-hero-buttons{
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 20px;
+    max-width: fit-content; 
+    flex-direction: column;
+    margin-top: 350px;
+    flex-wrap: wrap; 
+    margin-left: 5px;
+}
+ 
+/* BUTTON COMMON */
+
+.comm-demo-btn,
+.comm-whatsapp-btn{
+    padding: 14px 30px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: fit-content;
+    transition: 0.3s ease;
+}
+
+/* BOOK DEMO */
+
+.comm-demo-btn{
+    background: #13518C;
+    color: white;
+}
+
+/* WHATSAPP */
+
+.comm-whatsapp-btn{
+    background: #25D366;
+    color: white;
+}
+
+/* HOVER */
+
+.comm-demo-btn:hover,
+.comm-whatsapp-btn:hover{
+    transform: translateY(-2px);
+}
+
+/* MOBILE */
+
+@media (max-width: 480px){
+
+    .comm-hero-buttons{
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 320px;
+         margin-left: 20px;
+    }
+
+    .comm-demo-btn,
+    .comm-whatsapp-btn{
+        width: 90%;
+        text-align: center;
+    }
+}
+
+ 
 /* SERVICES */
 
 .comm-services{
   padding:100px 10%;
   background:#f9fafb;
   text-align:center;
+  margin-top: -100px;
 }
 
 .comm-services h2{
   font-size:36px;
-  margin-bottom:60px;
+  margin-bottom: 30px;
 }
 
-.services-grid{
+.comm-services-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:30px;
 }
 
-.service-card{
-  background:white;
+.comm-service-card{
+  background:white; 
   padding:30px;
   border-radius:16px;
   box-shadow:0 10px 25px rgba(0,0,0,0.05);
   transition:0.3s;
 }
 
-.service-card:hover{
-  transform:translateY(-10px);
+.comm-service-card p{
+  text-align: justify;
 }
+ 
+.comm-service-card:hover{
+  transform:translateY(-10px);
+} 
 
-.service-img{
+.comm-service-img{
   height:120px;
   width: 100%;
   margin-bottom:20px;
 }
 
-.service-img img{
+.comm-service-img img{
   width:100%;
   height:100%;
-  object-fit:contain;
+  object-fit: cover;
 }
 
-.service-card h3{
+.comm-service-card h3{
   margin-bottom:10px;
+  text-align: justify;
 }
 
 
@@ -138,6 +226,8 @@
 
 .comm-benefits{
   padding:100px 10%;
+  margin-top: -170px;
+  margin-bottom: 0px;
 }
 
 .benefits-container{
@@ -176,44 +266,134 @@
 
 
 
-/* CONTACT SECTION */
-
-.contact-section{
-  position:relative;
-  height:60vh;
-  overflow:hidden;
+/* ========== VIDEO CONTACT SECTION ========== */
+.comm-contact {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.contact-section .video{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.comm-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.contact-section .overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.65);
+/* Dark overlay */
+.comm-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
-.contact-content{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  text-align:center;
-  color:white;
+
+/* Content center */
+.comm-contact-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
-.contact-btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 30px;
-  background:#fb8500;
-  color:white;
-  text-decoration:none;
-  border-radius:6px;
+.comm-contact-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
+
+.comm-contact-content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #e5e7eb;
+}
+
+/* Button */
+.comm-contact-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #fb8500;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.comm-contact-btn:hover {
+  background: #e76f00;
+  transform: translateY(-3px);
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 992px) {
+
+  .comm-headings h3 {
+    font-size: 30px;
+  }
+
+  .comm-headings p {
+    font-size: 14px;
+  }
+
+  .comm-card {
+    padding: 30px 40px;
+  }
+}
+/* ================= CONTACT MOBILE FIX ================= */
+
+@media (max-width: 768px) {
+
+  .comm--contact {
+    height: auto;              /* ❌ 45vh hata */
+    min-height: 60vh;          /* ✅ proper space */
+    padding: 40px 15px;        /* spacing */
+  }
+
+  .comm-contact-content {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .comm-contact-content h1 {
+    font-size: clamp(22px, 5vw, 28px);
+    line-height: 1.3;
+  }
+ 
+  .comm-contact-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .comm-contact-btn {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .comm-contact {
+    min-height: 65vh;
+  }
+
+  .comm-contact-content h1 {
+    font-size: 20px;
+  }
+} 
 /* ================= RESPONSIVE DESIGN ================= */
 
 /* ====== 1200px ====== */
@@ -292,11 +472,11 @@
   font-size:15px;
 }
 
-.comm-overview,
+/* .comm-overview,
 .comm-services,
 .comm-benefits{
   padding:70px 6%;
-}
+} */
 
 .services-grid{
   grid-template-columns:1fr;
@@ -348,58 +528,52 @@
   font-size:14px;
 }
 
+
+
+
 }
 
 
 
 /* =================Slider Section===================== */
 
-.slider-wrapper {
-  width: 100%;
-  overflow: hidden;
-  padding: 90px 0 70px 0;
-  overflow: hidden;
-  background: #ffffff;
-}
-.slider-wrapper h2{
-  /* display: flex; */
-  align-items: center;
-  font-weight: 700;
-  color: #000000;
+.comm-slider-wrapper {
+ padding: 80px 0; 
   text-align: center;
-  /* margin-top: -50px; */
-    margin-bottom: 80px; 
+  background: #fff;
+  background: transparent;
+  overflow: hidden; 
+  margin-top: -100px;
+}
+.comm-slider-wrapper h2{
+  margin-bottom: 60px; 
+  margin-top: -50px;
 
 }
 
 
 
-.slider-track {
-  display: flex;
+.comm-slider-track {
+   display: flex;
+  gap: 20px;
   width: max-content;
   animation: scroll 25s linear infinite;
 }
 
-.slider-card {
-  min-width: 160px;
-  height: 120px;
-  background: #fff;
-  border-radius: 14px;
-  margin: 0 12px;
+.comm-slider-card {
+  min-width: 150px;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+
 }
 
-.slider-card img {
-  width: 70%;
-  height: auto;
-  object-fit: contain;
+.comm-slider-card img {
+  width: 50%;
 }
 
-.slider-card:hover {
+.comm-slider-card:hover {
   transform: translateY(-8px) scale(1.05);
 }
 
@@ -416,9 +590,65 @@
 
 /* responsive */
 @media (max-width: 768px) {
-  .slider-card {
+  .comm-slider-card {
     min-width: 130px;
     height: 100px;
   }
 }
 
+/* ===============FAQs============================== */
+
+.comm-faq-section{
+    padding:80px 8%;
+    background:#f8f9fb;
+}
+
+.comm-faq-section h2{
+  margin-top: -100px;
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.2rem;
+}
+
+.comm-faq-list{
+    max-width:1200px;
+    margin:auto;
+}
+
+.comm-faq-list dt{
+    font-size:1.2rem;
+    font-weight:700;
+    color:#1f2937;
+    margin-top:25px;
+    margin-bottom:10px;
+}
+
+.comm-faq-list dd{
+    margin-left:0;
+    padding:18px 22px;
+    background:#fff;
+    border-radius:12px;
+    line-height:1.8;
+    color:#4b5563;
+    box-shadow:0 3px 12px rgba(0,0,0,0.05);
+}
+
+@media(max-width:768px){
+
+    .comm-faq-section{
+        padding:60px 5%;
+    }
+
+    .comm-faq-section h2{
+        font-size:1.8rem;
+    }
+
+    .comm-faq-list dt{
+        font-size:1.05rem;
+    }
+
+    .comm-faq-list dd{
+        padding:15px;
+        font-size:0.95rem;
+    }
+}

@@ -4,7 +4,7 @@
 }
 
 /* ================= HERO ================= */
-.wifi-hero {
+.tele-hero {
   position: relative;
   height: 80vh;
   overflow: hidden;
@@ -22,29 +22,146 @@
   background: rgba(0,0,0,0.6);
 }
 
-.hero-content {
+.tele-hero-content {
   position: absolute;
   top: 50%;
   left: 10%;
   transform: translateY(-50%);
   color: rgb(255, 255, 255);
-  max-width: 600px;
+  /* max-width: 600px; */
 }
 
-.hero-content h1 {
+.tele-hero-content h1 {
   font-size: 48px;
   margin-bottom: 20px;
   color: #000000;
+  margin-left : 120px;
 }
 
-.hero-content p {
+.tele-hero-content p {
   font-size: 18px;
   color: #000000;
+  margin-left: 120px;
+  font-weight :400px;
 }
 
+
+/* ================= HERO BUTTONS ================= */
+
+.telecom-hero-buttons{
+    position: absolute;
+
+    bottom: 10px;
+    /* left: 50%; */
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 20px;
+    max-width: fit-content;
+    margin-left: 115px;
+    flex-wrap: wrap;
+}
+
+/* COMMON BUTTON STYLE */
+
+.telecom-demo-btn,
+.telecom-whatsapp-btn{
+
+    padding: 14px 30px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+/* BOOK DEMO BUTTON */
+
+.telecom-demo-btn{
+    background: #13518C;
+    color: white;
+}
+
+/* WHATSAPP BUTTON */
+
+.telecom-whatsapp-btn{
+    background: #25D366;
+    color: white;
+}
+
+/* HOVER */
+
+.telecom-demo-btn:hover,
+.telecom-whatsapp-btn:hover{
+    transform: translateY(-3px);
+}
+
+/* HERO VIDEO FIX */
+
+.hero-img{
+    position: relative;
+    z-index: 0;
+}
+
+.hero-overlay{
+    z-index: 1;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px){
+
+    .telecom-hero-buttons{
+
+        width: 100%;
+
+        bottom: 30px;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 150px;
+        gap: 10px;
+
+        padding: 0 10px;
+
+        flex-wrap: nowrap;
+    }
+
+    .telecom-demo-btn,
+    .telecom-whatsapp-btn{
+
+        width: auto;
+
+        padding: 12px 16px;
+
+        font-size: 13px;
+    }
+}
+
+
 /* ================= OVERVIEW ================= */
-.wifi-overview {
+.telecom-overview {
   padding: 100px 10%;
+  margin-top: 30px;
 }
 
 .overview-container {
@@ -77,107 +194,162 @@
   border-radius: 16px;
 }
 
+
+/* ========Services=================== */
+
+.telecom-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f8f9fb;
+  margin-top: -100px;
+}
+
+.telecom-section h2 {
+  margin-bottom: 40px;
+  font-size: 26px;
+  color: #222;
+}
+
+/* Grid */
+.telecom-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+.telecom-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.telecom-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Text */
+.telecom-card h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.telecom-card p {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .telecom-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .telecom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ================= FEATURES ================= */
-.wifi-features {
+.tele-features {
   padding: 100px 10%;
   background: #f9fafb;
   text-align: center;
+  margin: -20px 0 -40px;
 }
-
-.wifi-features h2 {
+ 
+.tele-features h2 {
   font-size: 36px;
-  margin-bottom: 60px;
+  margin: -100px 0 30px;
 }
 
-.features-grid {
+.tele-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
 
-.feature-card {
-  background: rgb(104, 74, 113);
-  color: white;
+.tele-card {
+  /* background: rgb(104, 74, 113); */
+  color: rgb(0, 0, 0);
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
 
-.feature-card h3 {
+.tele-card h3 {
   margin-bottom: 15px;
 }
 
-.feature-card:hover {
+.tele-card:hover {
   transform: translateY(-10px);
   color: cadetblue;
-}
+} 
 
 /* ================= SLIDER ================= */
-.slider-wrapper {
-  width: 100%;
-  height: 50%;
-  overflow: hidden;
-  padding: 90px 0 70px 0;
-  background: #ffffff;
-}
-
-.slider-wrapper h2 {
+.tele-slider-wrapper {
+  padding: 80px 0;
   text-align: center;
-  font-weight: 700;
-  color: #000000;
-  margin-bottom: 80px;
+  background: #fff;
+  background: transparent;
+  overflow: hidden; 
+  margin: -150px 0 0px;
 }
 
-.slider-track {
+.tele-slider-wrapper h2 {
+  margin-bottom: 60px;
+}
+
+.tele-slider-track {
   display: flex;
+  gap: 20px;
   width: max-content;
   animation: scroll 25s linear infinite;
 }
 
-.slider-card {
-  min-width: 160px;
-  height: 120px;
-  background: #fff;
-  border-radius: 14px;
-  margin: 0 12px;
+.tele-slider-card {
+  min-width: 150px;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
 }
 
-.slider-card img {
-  width: 100%;
-  /* height: 100%; */
-  height: auto;
-  object-fit: contain;
-}
-
-.slider-card:hover {
-  transform: translateY(-8px) scale(1.05);
+.tele-slider-card img {
+  width: 50%;
 }
 
 @keyframes scroll {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
 }
 
+
 /* ================= BENEFITS ================= */
-.wifi-benefits {
+.tele-benefits {
   padding: 100px 10%;
+  margin-top: -130px;
 }
 
 .benefits-container {
   display: flex;
   gap: 60px;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
 
 .benefits-text {
@@ -209,10 +381,11 @@
 }
 
 /* ================= USE CASE ================= */
-.wifi-usecase {
+.tele-usecase {
   padding: 100px 10%;
   background: #f9fafb;
   text-align: center;
+  margin: -150px 0 5px;
 }
 
 .usecase-grid {
@@ -234,111 +407,199 @@
   transform: translateY(-5px);
 }
 
-/* ================= CONTACT ================= */
-.contact {
+
+
+/* ========== VIDEO CONTACT SECTION ========== */
+.tele-contact {
   position: relative;
-  height: 60vh;
+  height: 50vh;
+  width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.video {
+.tele-video {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.overlay {
+/* Dark overlay */
+.tele-overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
-.contact-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+/* Content center */
+.tele-contact-content {
+  position: relative;
+  z-index: 3;
   text-align: center;
-  color: white;
+  color: #ffffff;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
-.contact-content h1 {
-  font-size: 36px;
+.tele-contact-content h1 {
+  font-size: 42px;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
-.contact-content p {
-  margin-bottom: 20px;
+.tele-contact-content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #e5e7eb;
 }
 
-.contact-btn {
-  padding: 12px 30px;
+/* Button */
+.tele-contact-btn {
+  display: inline-block;
+  padding: 14px 36px;
   background: #fb8500;
-  color: white;
-  border-radius: 6px;
+  color: #ffffff;
   text-decoration: none;
-  transition: 0.3s;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s ease;
 }
 
-.contact-btn:hover {
+.tele-contact-btn:hover {
   background: #e76f00;
+  transform: translateY(-3px);
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1024px) {
-  .hero-content h1 {
-    font-size: 36px;
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 992px) {
+
+  .tele-headings h3 {
+    font-size: 30px;
   }
 
-  .overview-text h2,
-  .wifi-features h2,
-  .benefits-text h2 {
-    font-size: 28px;
+  .tele-headings p {
+    font-size: 14px;
+  }
+
+  .tele-card {
+    padding: 30px 40px;
   }
 }
+/* ================= CONTACT MOBILE FIX ================= */
 
 @media (max-width: 768px) {
-  .hero-content {
-    left: 5%;
-    max-width: 90%;
+
+  .tele-contact {
+    height: auto;              /* ❌ 45vh hata */
+    min-height: 60vh;          /* ✅ proper space */
+    padding: 40px 15px;        /* spacing */
   }
 
-  .hero-content h1 {
-    font-size: 28px;
+  .tele-contact-content {
+    max-width: 100%;
+    padding: 0 10px;
   }
 
-  .hero-content p {
-    font-size: 16px;
+  .tele-contact-content h1 {
+    font-size: clamp(22px, 5vw, 28px);
+    line-height: 1.3;
   }
 
-  .overview-container,
-  .benefits-container {
-    flex-direction: column;
+  .tele-contact-content p {
+    font-size: 14px;
+    line-height: 1.5;
   }
 
-  .slider-card {
-    min-width: 130px;
-    height: 100px;
-  }
-
-  .contact-content h1 {
-    font-size: 24px;
+  .tele-contact-btn {
+    padding: 12px 22px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .wifi-overview,
-  .wifi-features,
-  .wifi-benefits,
-  .wifi-usecase {
-    padding: 60px 5%;
+  .tele-contact {
+    min-height: 65vh;
   }
 
-  .hero-content h1 {
-    font-size: 22px;
+  .tele-contact-content h1 {
+    font-size: 20px;
   }
+} 
 
-  .feature-card {
-    padding: 25px;
-  }
+
+/* =========================
+   FAQ SECTION
+========================= */
+
+.tele-faq-section{
+    width:100%;
+    padding:80px 8%;
+    background:#f8f9fb;
+}
+
+.tele-faq-section h2{
+     text-align:center;
+    font-size:2.2rem;
+    font-weight:700;
+    color:#1f2937;
+    margin-bottom:40px;
+    margin-top: -130px;
+}
+
+.tele-faq-list{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.tele-faq-list dt{
+    font-size:1.2rem;
+    font-weight:700;
+    color:#111827;
+    margin-top:24px;
+    margin-bottom:10px;
+}
+
+.tele-faq-list dd{
+    margin-left:0;
+    padding:18px 22px;
+    background:#ffffff; 
+    border-radius:12px;
+    line-height:1.8;
+    color:#4b5563;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+.tele-faq-list dt:first-child{
+    margin-top:0;
+}
+
+@media(max-width:768px){
+
+    .tele-faq-section{
+        padding:60px 20px;
+    }
+
+    .tele-faq-section h2{
+        font-size:30px;
+    }
+
+    .tele-faq-list dt{
+        font-size:18px;
+    }
+
+    .tele-faq-list dd{
+        font-size:15px;
+    }
 }
