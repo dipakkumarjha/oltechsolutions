@@ -14,6 +14,7 @@ import TeleImg from "./productImg/TeleImgoltechsolutions.png"
 import WhyChoose from "./productImg/WhyChooseoltechsolutions.png"
 import Slider from "../../components/Slider";
 import Popup from "../../components/Popup";
+import AIChatBot from "../../components/AIChatBot/AIChatBot";
 
 const TelecomServices = () => {
 
@@ -286,7 +287,8 @@ const TelecomServices = () => {
           </Link>
         </div>
       </div>
-
+        
+      <AIChatBot/>
       <Footer />
       <Popup showPopup={showPopup} setShowPopup={setShowPopup} />
     </div>

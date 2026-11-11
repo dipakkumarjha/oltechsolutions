@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
-
+import whatsappicon from "../Images/whatsappicon.jpg"
 import sliderimage from "../Images/sliderimage.png";
 import profile from "../Images/profileoltechsolutions.png";
 import ContactForm from "../components/ContactForm";
@@ -20,6 +20,7 @@ import GovSlider from "../components/GovSlider";
 import PrivSlider from "../components/PrivSlider";
 import { Link } from "react-router-dom";
 import Popup from "../components/Popup";
+import AIChatBot from "../components/AIChatBot/AIChatBot";
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -164,7 +165,7 @@ const Home = () => {
           </button>
 
           <Link to="/chat" className="whatsapp-btn">
-            CHAT ON WHATSAPP
+            CHAT ON WHATSAPP 
           </Link>
 
         </div>
@@ -283,6 +284,16 @@ const Home = () => {
       {/* ================= GOV/PRIVATE SLIDER START ================= */}
       <GovSlider />
       <PrivSlider />
+
+
+      {/* <a
+        href="https://wa.me/918130875594?text=Hello%20I'm%20interested%20in%20your%20products"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-button-bottom"
+      >
+        <img src={whatsappicon} alt="WhatsApp" />
+      </a> */}
       {/* ================= GOV/PRIVATE SLIDER END ================= */}
 
       {/* ================= CLIENT FEEDBACK START ================= */}
@@ -444,6 +455,8 @@ const Home = () => {
 
       </section>
 
+
+      <AIChatBot/>
       {/* ================= FAQ SECTION END ================= */}
 
       {/* ================= FOOTER START ================= */}

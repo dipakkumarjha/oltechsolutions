@@ -3,6 +3,7 @@
   overflow: hidden;
   background: transparent;
   padding: 20px 0;
+  background: #ffffff;
 }
 .priv-slider-wrapper h2{
   display: flex;
@@ -20,12 +21,11 @@
   width: max-content;
   animation: scroll 20s linear infinite;
 }
-
 /* Card */
 .priv-slider-card {
   flex: 0 0 auto;
   margin-right: 50px;
-  
+  background-color: transparent;
 }
 
 /* Image */
@@ -57,6 +57,6 @@
 }
 
 /* Hover stop */
-.priv-slider-wrapper:hover .priv-slider-track {
+/* .priv-slider-wrapper:hover .priv-slider-track {
   animation-play-state:paused;
-}
+} */

@@ -14,6 +14,7 @@ import Hikvision from "../OemImg/Hikvisionoltechsolutions.jpg"
 import Bosch from "../OemImg/Boscholtechsolutions.png"
 import Slider from "../../components/Slider";
 import Popup from "../../components/Popup";
+import AIChatBot from "../../components/AIChatBot/AIChatBot";
 
 
 const SurveillanceSolution = () => {
@@ -301,7 +302,8 @@ const SurveillanceSolution = () => {
           </Link>
         </div>
       </div>
-
+       
+      <AIChatBot/>
       <Footer />
 
       <Popup showPopup={showPopup} setShowPopup={setShowPopup} />

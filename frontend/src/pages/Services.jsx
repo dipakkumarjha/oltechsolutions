@@ -14,6 +14,7 @@ import DataImg from "../Images/DataImgoltechsolutions.jpg"
 import TeleImg from "../Images/TeleImgoltechsolutions.png"
 import SurvImg from "../Images/SurvImgoltechsolutions.png"
 import Slider from "../components/Slider";
+import AIChatBot from "../components/AIChatBot/AIChatBot";
 const ProductsServices = () => {
 
 
@@ -260,6 +261,7 @@ const ProductsServices = () => {
         </div>
       </div>
 
+      <AIChatBot/>
       <Footer/>
 
     </>

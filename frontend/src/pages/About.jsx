@@ -6,6 +6,8 @@ import "./About.css"
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
 import Slider from '../components/Slider'
+import profile from "../Images/profileoltechsolutions.png";
+import AIChatBot from '../components/AIChatBot/AIChatBot'
 
 
 const About = () => {
@@ -26,7 +28,7 @@ const About = () => {
           our values of growing with our people, communities, and customers.</p>
       </div>
 
- 
+  
 
       {/* WHO WE ARE */}
       <section className="about-section">
@@ -55,7 +57,7 @@ Whether you're a startup or an enterprise, OL Tech Solutions is your reliable te
         <div className='about-card'>
           <p>Business Setup</p>
           <h2>2017</h2>
-        </div>
+        </div> 
 
         <div className='about-card'>
           <p>Serving Customers</p>
@@ -90,16 +92,16 @@ At OL Tech Solutions, we envision a future where businesses operate with smarter
 
         <div className="team-grid">
                     <div className="team-card">
-            <img src={photo}alt="team" />
+            <img src={profile}alt="team" />
             <h4>Shama Parveen</h4>
             <p>Founder</p>
           </div>
 
-          <div className="team-card">
+          {/* <div className="team-card">
             <img src={photo} alt="team" />
             <h4>Tasleem Khan</h4>
             <p>Director</p>
-          </div>
+          </div> */}
 
 
           <div className="team-card">
@@ -109,7 +111,7 @@ At OL Tech Solutions, we envision a future where businesses operate with smarter
           </div>
 
           <div className="team-card">
-            <img src={photo} alt="team" />
+            <img src={profile} alt="team" />
             <h4>Ayush Ujjwal</h4>
             <p>Gov Sales Manager</p>
           </div>
@@ -135,7 +137,7 @@ At OL Tech Solutions, we envision a future where businesses operate with smarter
       </div>
 
 
-
+      <AIChatBot />
 
       <Footer />
 

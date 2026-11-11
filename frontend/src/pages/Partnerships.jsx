@@ -17,57 +17,68 @@ import Fortinet from "../pages/OemImg/Fortinetoltechsolutions.png"
 import Commvault from "../pages/OemImg/Commvaultoltechsolutions.png"
 import DLink from "../pages/OemImg/DLinkoltechsolutions.png"
 import Slider from "../components/Slider";
+import AIChatBot from "../components/AIChatBot/AIChatBot";
 
 const partners = [
   {
     name: "Cisco",
     logo: Cisco,
-    desc: "Global leader in enterprise networking, security, and IT infrastructure solutions."
+    desc: "Global leader in enterprise networking, security, and IT infrastructure solutions.",
+    buttons: "https://www.cisco.com/"
   },
   {
     name: "Shophos",
     logo: Sophos,
-    desc: "World’s most comprehensive cloud platform for scalable infrastructure."
+    desc: "World’s most comprehensive cloud platform for scalable infrastructure.",
+    buttons: "https://www.sophos.com/"
   },
   {
     name: "Fortinate",
     logo: Fortinet,
-    desc: "Enterprise cloud, productivity, and advanced computing solutions."
+    desc: "Enterprise cloud, productivity, and advanced computing solutions.",
+    buttons: "https://www.fortinet.com/"
   },
   {
     name: "Ruckus",
     logo: Ruckus,
-    desc: "Advanced cybersecurity solutions including firewall and threat protection."
+    desc: "Advanced cybersecurity solutions including firewall and threat protection.",
+    buttons: "https://www.ruckusnetworks.com/"
   },
   {
     name: "Dell Technologies",
     logo: dell,
-    desc: "Enterprise servers, storage, and modern IT infrastructure solutions."
+    desc: "Enterprise servers, storage, and modern IT infrastructure solutions.",
+    buttons: "https://www.dell.com/"
   },
   {
     name: "HP Enterprise",
     logo: HP,
-    desc: "Reliable enterprise computing and infrastructure technologies."
+    desc: "Reliable enterprise computing and infrastructure technologies.",
+    buttons: "https://partner.hp.com/"
   },
   {
     name: "Commvault",
     logo: Commvault ,
-    desc: "Database, enterprise software, and cloud infrastructure provider."
+    desc: "Database, enterprise software, and cloud infrastructure provider.",
+    buttons: "https://www.commvault.com/"
   },
   {
     name: "Bosch",
     logo: Bosch,
-    desc: "Industry leader in virtualization and cloud infrastructure."
+    desc: "Industry leader in virtualization and cloud infrastructure.",
+    buttons: "https://www.bosch.in/"
   },
   {
     name: "D-Link",
     logo: DLink,
-    desc: "Next-generation cybersecurity and network protection."
+    desc: "Next-generation cybersecurity and network protection.",
+    buttons: "https://www.dlink.com/"
   },
   {
     name: "Polycom",
     logo: Polycom,
-    desc: "Enterprise IT, AI, and hybrid cloud solutions provider."
+    desc: "Enterprise IT, AI, and hybrid cloud solutions provider.",
+    buttons: "https://www.hp.com/"
   }
 ];
 
@@ -141,6 +152,12 @@ const Partnership = () => {
 
                 <p>{partner.desc}</p>
 
+                <button className="partner-btn" onClick={() =>
+                  window.open(partner.buttons, "_blank")
+                }>
+                  Visit Portal
+                </button>
+
               </div>
 
             ))}
@@ -183,9 +200,12 @@ const Partnership = () => {
 
       </div>
 
+
+      <AIChatBot/>
       <Footer />
     </>
   );
 };
 
 export default Partnership;
+

@@ -16,6 +16,7 @@ import Azure from "../OemImg/DataCenter/Azureoltechsolutions.png";
 import AWS from "../OemImg/DataCenter/AWSoltechsolutions.png"
 import Slider from "../../components/Slider";
 import Popup from "../../components/Popup";
+import AIChatBot from "../../components/AIChatBot/AIChatBot";
 const DataCenterCloud = () => {
 
     const videoRef = useRef(null)
@@ -306,6 +307,7 @@ const DataCenterCloud = () => {
 
             </section>
 
+            <AIChatBot />
             <Footer />
 
             <Popup showPopup={showPopup} setShowPopup={setShowPopup} />

@@ -11,7 +11,7 @@ const BlogCard = ({ blog }) => {
  
       <div className="blog-image">
         <img src={blog.image} alt={blog.title} />
-      </div>
+      </div> 
 
       <div className="blog-content">
 

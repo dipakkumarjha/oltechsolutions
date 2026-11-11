@@ -7,6 +7,7 @@ import Location from "../Images/Locationoltechsolutions.png"
 import helpCenteroltechsolutions from "../Images/helpCenteroltechsolutions.jpg"
 import formimg from "../Images/formimgoltechsolutions.jpg"
 import celebrate from "../Images/celebrateoltechsolutions.jpg"
+import AIChatBot from "../components/AIChatBot/AIChatBot";
 // import Slider from "../components/Slider";
 
 
@@ -76,6 +77,8 @@ const Contact = () => {
         <button>Start Your Project</button>
       </section>
 
+
+      <AIChatBot/>
       <Footer />
     </>
   );

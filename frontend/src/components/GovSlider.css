@@ -2,6 +2,7 @@
   width: 100%;
   overflow: hidden;
   background: transparent;
+  background: #fbfbfb;
   padding: 20px 0;
 }
 .gove-slider-wrapper h2{
@@ -20,11 +21,12 @@
   width: max-content;
   animation: scroll 30s linear infinite;
 }
-
+ 
 /* Card */
 .gove-slider-card {
   flex: 0 0 auto;
   margin-right: 50px;
+  background: transparent;
 }
 
 /* Image */
@@ -54,6 +56,6 @@
 }
 
 /* Hover stop */
-.gove-slider-wrapper:hover .gove-slider-track {
+/* .gove-slider-wrapper:hover .gove-slider-track {
   animation-play-state:paused;
-}
+} */

@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import CareerImg from "../Images/CareerImgoltechsolutions.jpg"
 import aboutVideo from "../Images/aboutVideo.mp4"
 import Slider from "../components/Slider";
+import AIChatBot from "../components/AIChatBot/AIChatBot";
 
 const Career = () => {
 
@@ -130,7 +131,7 @@ const Career = () => {
         </div>
       </div>
 
-
+      <AIChatBot/>
       <Footer />
     </>
   );

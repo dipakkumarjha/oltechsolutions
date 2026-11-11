@@ -51,6 +51,7 @@ body{
     max-width: 900px;
     margin-top: 70px;
     animation: fadeUp 1s ease;
+    color: #000000;
 }
 
 .blog-hero-content span{

@@ -1,6 +1,7 @@
 import React from "react";
 import "./TermsConditions.css";
 import Slider from "../components/Slider";
+import AIChatBot from "../components/AIChatBot/AIChatBot";
 import Footer from "../components/Footer";
 
 const TermsConditions = () => {
@@ -114,6 +115,8 @@ const TermsConditions = () => {
 
       </div>
     </div>
+
+    <AIChatBot/>
     <Footer/>
     </>
   );

@@ -226,6 +226,7 @@ import email from "./productImg/emailoltechsolutions.jpg";
 import cyber from "./productImg/cyberoltechsolutions.png";
 
 import Popup from "../../components/Popup";
+import AIChatBot from "../../components/AIChatBot/AIChatBot";
 
 const ManageSecurity = () => {
 
@@ -579,6 +580,7 @@ const ManageSecurity = () => {
 
             </div>
 
+            <AIChatBot/>
             <Footer />
 
             <Popup

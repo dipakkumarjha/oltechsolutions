@@ -96,6 +96,41 @@
   line-height: 1.5;
 }
 
+
+.partner-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #0d6efd, #0056d2);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(13, 110, 253, 0.25);
+}
+
+.partner-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #0056d2, #003f9e);
+  box-shadow: 0 10px 24px rgba(13, 110, 253, 0.35);
+}
+
+.partner-btn:active {
+  transform: translateY(0);
+}
+
+.partner-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.2);
+}
+
+
 /* ================= SLIDER ================= */
 .partner-slider-wrapper {
   padding: 70px 0;

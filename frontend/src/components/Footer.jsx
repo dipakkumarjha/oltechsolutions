@@ -25,7 +25,7 @@ const Footer = () => {
 
           <div className="social-icons">
             <a href="https://www.facebook.com/oltechsolutionspvt" target="_blank" rel="noopener noreferrer"><FaFacebookF color="#1877F2"/></a>
-            <a href="https://www.instagram.com/_dipu_lal/" target="_blank" rel="noopener noreferrer"><FaInstagram color="#E1306C" /></a>
+            <a href="https://www.instagram.com/oltech_solutions" target="_blank" rel="noopener noreferrer"><FaInstagram color="#E1306C" /></a>
             <a href="https://www.linkedin.com/company/79839608/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn color="#0A66C2" /></a>
           </div>
           <div className="mail">

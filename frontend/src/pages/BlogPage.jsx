@@ -1,6 +1,7 @@
 import React from "react";
 import BlogSection from "../components/BlogSection";
 import Footer from "../components/Footer";
+import AIChatBot from "../components/AIChatBot/AIChatBot";
 
 const BlogPage = () => {
   return (
@@ -32,6 +33,9 @@ const BlogPage = () => {
       </section> 
 
       <BlogSection />
+
+
+      <AIChatBot/>
       <Footer/>
 
     </>

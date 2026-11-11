@@ -19,6 +19,7 @@ import Entegra from "../OemImg/Entegraoltechsolutions.png";
 import Cambium from "../OemImg/Cambiumoltechsolutions.png";
 import Engenuis from "../OemImg/Engeniusoltechsolutions.jpg";
 import Popup from "../../components/Popup";
+import AIChatBot from "../../components/AIChatBot/AIChatBot";
 
 const ManagedWifi = () => {
   const videoRef = useRef(null);
@@ -69,7 +70,7 @@ const ManagedWifi = () => {
             onClick={() => {
               setShowPopup(true);
               document.body.style.overflow = "hidden";
-            }}
+            }} 
           >
             BOOK DEMO
           </button>
@@ -495,6 +496,7 @@ const ManagedWifi = () => {
         </div>
       </div>
 
+      <AIChatBot />
       <Footer />
 
       <Popup

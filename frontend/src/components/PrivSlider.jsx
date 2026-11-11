@@ -1,48 +1,3 @@
-// import React from "react";
-// import "./PrivSlider.css";
-
-// import Axis from "../Images/PrivLogo/Axisoltechsolutions.png";
-// import Byjus from "../Images/PrivLogo/Byjusoltechsolutions.png";
-// import Crestech from "../Images/PrivLogo/Crestecholtechsolutions.png";
-// import garage from "../Images/PrivLogo/garageoltechsolutions.png"
-// import mediamonks from "../Images/PrivLogo/mediamonksoltechsolutions.png"
-// import merchserve from "../Images/PrivLogo/merchserveoltechsolutions.jpg"
-// import Omax from "../Images/PrivLogo/Omaxoltechsolutions.png"
-// import optiemus from "../Images/PrivLogo/optiemusoltechsolutions.png"
-// import pathways from "../Images/PrivLogo/pathwaysoltechsolutions.jpg"
-// import sagacious from "../Images/PrivLogo/sagaciousoltechsolutions.png"
-// import shareit from "../Images/PrivLogo/shareitoltechsolutions.png"
-// import swift from "../Images/PrivLogo/swiftoltechsolutions.png"
-// import wework from "../Images/PrivLogo/weworkoltechsolutions.png"
-
-  
-// const PrivSlider = () => {
-//   const govImages = [
-//     Axis, Byjus,Crestech,
-//     garage, mediamonks,merchserve,Omax,
-//     optiemus, pathways, sagacious,shareit,swift,
-//     wework
-//   ];
-
-//   return (
-//     <section className="priv-slider-wrapper">
-        
-//       <div className="priv-slider-track">
-
-//         {[ ...govImages,...govImages].map((img, index) => (
-//           <div className="priv-slider-card" key={index}>
-//             <img src={img} alt="logo" />
-//           </div>
-//         ))}
-
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default PrivSlider;
-
-
 import React from "react";
 import "./PrivSlider.css";
 
@@ -60,7 +15,7 @@ import sagacious from "../Images/PrivLogo/sagaciousoltechsolutions.png";
 import shareit from "../Images/PrivLogo/shareitoltechsolutions.png";
 import swift from "../Images/PrivLogo/swiftoltechsolutions.png";
 import wework from "../Images/PrivLogo/weworkoltechsolutions.png";
-
+ 
 const PrivSlider = () => {
 
   // ✅ Each image with custom size

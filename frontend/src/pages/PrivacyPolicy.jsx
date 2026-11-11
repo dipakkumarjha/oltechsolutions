@@ -2,6 +2,7 @@ import React from "react";
 import "./PrivacyPolicy.css";
 import Footer from "../components/Footer";
 import Slider from "../components/Slider";
+import AIChatBot from "../components/AIChatBot/AIChatBot";
 
 const PrivacyPolicy = () => {
   return (
@@ -161,6 +162,8 @@ const PrivacyPolicy = () => {
       </div>
     
     </div>
+
+      <AIChatBot/>
       <Footer/>
     </>
     

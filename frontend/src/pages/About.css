@@ -33,7 +33,7 @@ body {
 }
 
 .headings p {
-  position: absolute;
+  position: absolute; 
   top: 55%;
   left: 10%;
   transform: translateY(-50%);
@@ -48,9 +48,8 @@ body {
 }
 
 .about-text p{
-   
-  font-weight: 500;
   text-align: justify;
+  color: #000000;
 }
 
 .about-container {
@@ -125,7 +124,7 @@ body {
 .mv-box p{
   color: #060606;
   /* font-style: italic; */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
   text-align: justify;
 }
 

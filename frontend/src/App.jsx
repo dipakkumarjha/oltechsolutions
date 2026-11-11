@@ -26,6 +26,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsConditions from './pages/TermsConditions'
 import BlogPage from './pages/BlogPage'
 import SingleBlog from './pages/SingleBlog'
+// import AIChatBot from "./components/AIChatBot/AIChatBot";
 // import Popup from './components/Popup'
 // import Loader from './components/Loader'
 
@@ -80,6 +81,7 @@ function App() {
           <Route path='/terms-conditions' element={<TermsConditions/>} />
           <Route path='/blog' element= {<BlogPage/>} />
           <Route path='/blog/:slug' element={<SingleBlog/>} />
+          {/* <Route path="/AIChatBot" element={<AIChatBot />} /> */}
           {/* <Route path='/Popup' element= {<Popup/>} /> */}
         </Routes>
       </>

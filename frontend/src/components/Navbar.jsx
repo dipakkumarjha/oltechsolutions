@@ -9,7 +9,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   
-  return ( 
+  return (  
     <div className='container'>
 
       <nav className='navbar'>

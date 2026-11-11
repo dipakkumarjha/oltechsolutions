@@ -1,0 +1,737 @@
+
+/* =========================================
+   OL TECH SOLUTIONS - AI CHATBOT
+   ========================================= */
+
+.ol-chatbot {
+  --ol-chat-primary: #1769e0;
+  --ol-chat-primary-dark: #1053ba;
+  --ol-chat-text: #17243a;
+  --ol-chat-muted: #718096;
+  --ol-chat-border: #e8edf4;
+
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+/* Floating launcher */
+
+.ol-chat-launcher {
+  position: fixed;
+  right: 28px;
+  bottom: 26px;
+  z-index: 9998;
+
+  width: 68px;
+  height: 68px;
+  border: 0;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(145deg, #2781ff, #1357d8);
+  color: #fff;
+
+  box-shadow:
+    0 8px 28px rgba(23, 105, 224, 0.34),
+    0 3px 8px rgba(23, 105, 224, 0.16);
+
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ol-chat-launcher:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow:
+    0 12px 32px rgba(23, 105, 224, 0.4),
+    0 3px 8px rgba(23, 105, 224, 0.16);
+}
+
+.ol-chat-launcher:focus-visible,
+.ol-chat-close:focus-visible,
+.ol-chat-send:focus-visible {
+  outline: 3px solid #8dbbff;
+  outline-offset: 4px;
+}
+
+.ol-chat-launcher svg {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.25s ease;
+}
+
+.ol-chat-launcher-open svg {
+  transform: rotate(90deg);
+}
+
+.ol-launcher-pulse {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(23, 105, 224, 0.55);
+  border-radius: 50%;
+  animation: olChatPulse 2.8s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes olChatPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1.65);
+    opacity: 0;
+  }
+}
+
+/* Chat window */
+
+.ol-chat-window {
+  position: fixed;
+  right: 28px;
+  bottom: 110px;
+  z-index: 9999;
+
+  width: 390px;
+  height: min(590px, calc(100dvh - 145px));
+  min-height: 350px;
+  max-height: 680px;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  background: #fff;
+  border: 1px solid rgba(222, 231, 243, 0.95);
+  border-radius: 22px;
+
+  box-shadow:
+    0 24px 70px rgba(18, 39, 75, 0.17),
+    0 5px 18px rgba(18, 39, 75, 0.07);
+
+  transform-origin: bottom right;
+  animation: olChatWindowIn 0.28s cubic-bezier(0.2, 0.8, 0.2, 1)
+    both;
+}
+
+@keyframes olChatWindowIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Header */
+
+.ol-chat-header {
+  flex-shrink: 0;
+  min-height: 78px;
+  padding: 16px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  color: #fff;
+  background: linear-gradient(120deg, #1769e0, #104fba);
+}
+
+.ol-chat-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.ol-chat-logo {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+}
+
+.ol-chat-brand-info {
+  min-width: 0;
+}
+
+.ol-chat-brand-info h3 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.ol-chat-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.ol-status-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  background: #63e6a1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(99, 230, 161, 0.14);
+}
+
+.ol-chat-close {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ol-chat-close:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+/* Intro */
+
+.ol-chat-intro {
+  flex-shrink: 0;
+  padding: 20px 20px 16px;
+  background: linear-gradient(180deg, #f3f7ff 0%, #fff 100%);
+}
+
+.ol-chat-intro-label {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  color: var(--ol-chat-primary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.15px;
+}
+
+.ol-chat-intro h2 {
+  margin: 0 0 7px;
+  color: var(--ol-chat-text);
+  font-size: 23px;
+  line-height: 1.25;
+  font-weight: 750;
+  letter-spacing: -0.65px;
+}
+
+.ol-chat-intro p {
+  margin: 0;
+  color: #66758b;
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+/* Message area */
+
+.ol-chat-messages {
+  flex: 1;
+  min-height: 0;
+  padding: 16px 15px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  background: #fff;
+  scrollbar-width: thin;
+  scrollbar-color: #d5dfed transparent;
+}
+
+.ol-chat-messages::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ol-chat-messages::-webkit-scrollbar-thumb {
+  background: #d5dfed;
+  border-radius: 10px;
+}
+
+.ol-chat-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ol-chat-day::before,
+.ol-chat-day::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #edf1f7;
+}
+
+.ol-chat-day span {
+  color: #9aa6b7;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.ol-message-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+
+  animation: olMessageIn 0.22s ease both;
+}
+
+@keyframes olMessageIn {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ol-message-assistant {
+  justify-content: flex-start;
+}
+
+.ol-message-user {
+  justify-content: flex-end;
+}
+
+.ol-message-avatar {
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--ol-chat-primary);
+  background: #eaf2ff;
+  border-radius: 10px;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.ol-message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 82%;
+  min-width: 0;
+}
+
+.ol-message-bubble {
+  padding: 11px 13px;
+  border-radius: 15px;
+
+  font-size: 13px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.ol-message-assistant .ol-message-bubble {
+  color: #344258;
+  background: #f1f5fa;
+  border: 1px solid #edf1f6;
+  border-bottom-left-radius: 5px;
+}
+
+.ol-message-user .ol-message-bubble {
+  color: #fff;
+  background: linear-gradient(135deg, #2378ee, #1760d4);
+  border-bottom-right-radius: 5px;
+}
+
+.ol-message-time {
+  color: #9aa6b7;
+  font-size: 9px;
+  padding: 0 3px;
+}
+
+.ol-message-user .ol-message-time {
+  text-align: right;
+}
+
+/* Typing indicator */
+
+.ol-typing {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  min-height: 38px;
+  padding: 0 14px;
+
+  background: #f1f5fa;
+  border: 1px solid #edf1f6;
+  border-radius: 14px;
+  border-bottom-left-radius: 5px;
+}
+
+.ol-typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8a9bb2;
+  animation: olTyping 1s infinite ease-in-out;
+}
+
+.ol-typing span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.ol-typing span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes olTyping {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+/* Input composer */
+
+.ol-chat-composer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 13px 14px 10px;
+  background: #fff;
+  border-top: 1px solid #edf1f6;
+}
+
+.ol-chat-input-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.ol-chat-input-wrap input {
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+
+  padding: 0 14px;
+
+  border: 1px solid #e2e9f2;
+  border-radius: 13px;
+  outline: none;
+
+  color: #26364c;
+  background: #f8fafd;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.ol-chat-input-wrap input::placeholder {
+  color: #9aa6b7;
+}
+
+.ol-chat-input-wrap input:focus {
+  border-color: #80aff5;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(23, 105, 224, 0.09);
+}
+
+.ol-chat-send {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 13px;
+
+  color: #fff;
+  background: var(--ol-chat-primary);
+
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.ol-chat-send:not(:disabled):hover {
+  background: var(--ol-chat-primary-dark);
+  transform: translateY(-2px);
+}
+
+.ol-chat-send:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+/* Footer */
+
+.ol-chat-footer {
+  flex-shrink: 0;
+  padding: 0 12px 12px;
+
+  color: #9aa6b7;
+  background: #fff;
+
+  font-size: 10px;
+  text-align: center;
+}
+
+.ol-chat-footer strong {
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .ol-chat-launcher {
+    right: 20px;
+    bottom: 20px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .ol-chat-window {
+    right: 20px;
+    bottom: 98px;
+    width: min(390px, calc(100vw - 40px));
+    height: min(590px, calc(100dvh - 125px));
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .ol-chat-launcher {
+    right: 16px;
+    bottom: 16px;
+    width: 62px;
+    height: 62px;
+  }
+
+  .ol-chat-launcher svg {
+    width: 29px;
+    height: 29px;
+  }
+
+  .ol-chat-window {
+    right: 10px;
+    bottom: 88px;
+
+    width: calc(100vw - 20px);
+    height: min(590px, calc(100dvh - 105px));
+    min-height: 300px;
+
+    border-radius: 19px;
+  }
+
+  .ol-chat-header {
+    min-height: 70px;
+    padding: 13px 14px;
+  }
+
+  .ol-chat-intro {
+    padding: 16px 16px 13px;
+  }
+
+  .ol-chat-intro h2 {
+    font-size: 21px;
+  }
+
+  .ol-chat-messages {
+    padding: 13px 11px 17px;
+    gap: 14px;
+  }
+
+  .ol-chat-composer {
+    padding: 10px 10px 8px;
+    gap: 8px;
+  }
+
+  .ol-chat-footer {
+    padding-bottom: 9px;
+  }
+}
+
+/* Short screens */
+
+@media (max-height: 500px) {
+  .ol-chat-window {
+    top: 8px;
+    bottom: 82px;
+    height: auto;
+    min-height: 0;
+  }
+
+  .ol-chat-intro {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .ol-chat-intro-label {
+    margin-bottom: 4px;
+  }
+
+  .ol-chat-intro h2 {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+
+  .ol-chat-intro p {
+    font-size: 11px;
+  }
+}
+
+/* Respect accessibility preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .ol-chatbot *,
+  .ol-chatbot *::before,
+  .ol-chatbot *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+
+
+
+/* OL Tech chatbot lead capture form */
+.ol-lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 12px 8px;
+  padding: 16px;
+  border: 1px solid #e1e7ef;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.ol-lead-form h3 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #172b4d;
+}
+
+.ol-lead-form p {
+  margin: 0 0 4px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #64748b;
+}
+
+.ol-lead-form input,
+.ol-lead-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #fff;
+  color: #172b4d;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.ol-lead-form input:focus,
+.ol-lead-form textarea:focus {
+  border-color: #4776e6;
+  box-shadow: 0 0 0 2px rgba(71, 118, 230, 0.12);
+}
+
+.ol-lead-form textarea {
+  resize: vertical;
+}
+
+.ol-lead-form button {
+  padding: 11px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2457c5;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+} 
+
+.ol-lead-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.ol-lead-form small {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #64748b;
+}

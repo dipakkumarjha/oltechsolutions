@@ -18,6 +18,7 @@ import Microsoft from "../OemImg/Software/Microsoftoltechsolutions.png";
 import office from "../OemImg/Software/officeoltechsolutions.jpg";
 
 import Popup from "../../components/Popup";
+import AIChatBot from "../../components/AIChatBot/AIChatBot";
 
 const SoftwareLicence = () => {
 
@@ -477,6 +478,7 @@ const SoftwareLicence = () => {
 
       </section>
 
+      <AIChatBot/>
       <Footer />
 
       <Popup

@@ -83,7 +83,7 @@ const GovSlider = () => {
   // ✅ Each image with custom size
   const govImages = [
     { src: agriculture, w: 120, h: 105, mb: 0 },
-    { src: airforce, w: 110, h: 90,mb: 0  },
+    { src: airforce, w: 110, h: 90,mb: 0  },  
     { src: beml, w: 140, h: 120,mb: 0 },
     { src: cpao, w: 130, h: 90,mb: 0 },
     { src: delhiUniversity, w: 150, h: 95,mb: 0 },

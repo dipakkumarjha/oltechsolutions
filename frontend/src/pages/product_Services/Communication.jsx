@@ -20,6 +20,7 @@ import Panasonic from "../OemImg/Communication/Panasonicoltechsolutions.png";
 import Logitech from "../OemImg/Communication/Logitecholtechsolutions.png"
 import Slider from "../../components/Slider";
 import Popup from "../../components/Popup";
+import AIChatBot from "../../components/AIChatBot/AIChatBot";
 
 
 
@@ -267,7 +268,7 @@ const Communication = () => {
 
             
 
-
+            <AIChatBot/>
             <Footer />
 
             <Popup showPopup={showPopup} setShowPopup={setShowPopup} />
