@@ -63,7 +63,10 @@ router.post(
           pass: process.env.EMAIL_PASS,
         },
       });
+        await transporter.verify();
+        console.log("Gmail SMTP connection successful");
 
+        
       await transporter.sendMail({
         from: process.env.EMAIL_USER,
         replyTo: email,
@@ -83,12 +86,15 @@ router.post(
         message: "Form submitted successfully",
       });
     } catch (error) {
-      console.error("CONTACT ROUTE ERROR:", error);
+  console.error("CONTACT ERROR:", error.message);
+  console.error("ERROR CODE:", error.code);
+  console.error("ERROR COMMAND:", error.command);
+  console.error("ERROR RESPONSE:", error.response);
 
-      res.status(500).json({
-        success: false,
-        message: "Something went wrong",
-      });
+  res.status(500).json({
+    success: false,
+    message: "Something went wrong",
+  });
     }
   }
 );
